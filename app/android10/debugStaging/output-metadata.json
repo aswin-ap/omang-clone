@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.omang.app.one.android10.debug",
+  "variantName": "android10DebugStaging",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1000,
+      "versionName": "1.0.1-debug-staging",
+      "outputFile": "app-android10-debugStaging.apk"
+    }
+  ],
+  "elementType": "File"
+}

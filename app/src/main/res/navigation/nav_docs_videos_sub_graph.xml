@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_videos_docs"
+    app:startDestination="@id/docsFragment">
+
+    <fragment
+        android:id="@+id/docsFragment"
+        android:name="com.omang.app.ui.myClassroom.fragments.subjectContent.docsAndVideos.fragments.SubjectContentDocsFragment"
+        android:label="fragment_docs"
+        tools:layout="@layout/fragment_docs">
+        <action
+            android:id="@+id/action_docsFragment_to_subjectContentVideosFragment"
+            app:destination="@id/subjectContentVideosFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_docsFragment_to_documentViewerFragment"
+            app:destination="@id/documentViewerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectContentVideosFragment"
+        android:name="com.omang.app.ui.myClassroom.fragments.subjectContent.docsAndVideos.fragments.SubjectContentVideosFragment"
+        android:label="fragment_subject_videos"
+        tools:layout="@layout/fragment_subject_videos">
+        <action
+            android:id="@+id/action_subjectContentVideosFragment_to_docsFragment"
+            app:destination="@id/docsFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_subjectContentVideosFragment_to_videoViewerFragment2"
+            app:destination="@id/videoViewerFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoViewerFragment2"
+        android:name="com.omang.app.ui.videoViewer.fragment.VideoViewerFragment"
+        android:label="VideoViewerFragment">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <!--resourceId is video ID-->
+        <argument
+            android:name="resourceId"
+            app:argType="integer" />
+        <argument
+            android:name="file"
+            app:argType="string" />
+        <argument
+            android:name="classroomId"
+            app:argType="integer" />
+        <argument
+            android:name="lessonId"
+            app:argType="integer" />
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+        <argument
+            android:name="menu"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentViewerFragment"
+        android:name="com.omang.app.ui.pdfViewer.fragment.DocumentViewerFragment"
+        android:label="fragment_pdf_viewer"
+        tools:layout="@layout/fragment_pdf_viewer">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="resourceId"
+            app:argType="integer" />
+        <argument
+            android:name="file"
+            app:argType="string" />
+        <argument
+            android:name="classroomId"
+            app:argType="integer" />
+        <argument
+            android:name="lessonId"
+            app:argType="integer" />
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+        <argument
+            android:name="menu"
+            app:argType="integer" />
+    </fragment>
+</navigation>

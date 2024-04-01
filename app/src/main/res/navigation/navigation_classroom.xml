@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_classroom"
+    app:startDestination="@id/myClassRoomFragment2">
+
+    <fragment
+        android:id="@+id/myClassRoomFragment2"
+        android:name="com.omang.app.ui.myClassroom.fragments.MyClassRoomFragment"
+        android:label="fragment_my_class_room"
+        tools:layout="@layout/fragment_my_class_room">
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_myClassRoomFragment2_to_subjectContentsFragment"
+            app:destination="@id/subjectContentsFragment" />
+    </fragment>
+    <!--    <fragment
+            android:id="@+id/chatFragment"
+            android:name="com.omang.app.ui.myClassroom.fragments.subjectContent.chat.ChatFragment"
+            android:label="fragment_chat"
+            tools:layout="@layout/fragment_chat_dummy" />-->
+    <fragment
+        android:id="@+id/subjectContentsFragment"
+        android:name="com.omang.app.ui.myClassroom.fragments.subjectContent.SubjectContentsFragment"
+        android:label="SubjectContentsFragment">
+        <action
+            android:id="@+id/action_subjectContentsFragment_to_videoViewerFragment"
+            app:destination="@id/videoViewerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_subjectContentsFragment_to_pdfViewerFragment"
+            app:destination="@id/pdfViewerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_subjectContentsFragment_to_imageViewerFragment"
+            app:destination="@id/imageViewerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_subjectContentsFragment_to_webViewerFragment"
+            app:destination="@id/webViewerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_subjectContentsFragment_to_unitTestFragment"
+            app:destination="@id/navigation_unit_test"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_platformFragment_to_webViewerFragment"
+            app:destination="@id/webViewerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="classRoomId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_subjectContentsFragment_to_testResultDetailsFragment"
+            app:destination="@id/testResultDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/pdfViewerFragment"
+        android:name="com.omang.app.ui.pdfViewer.fragment.DocumentViewerFragment"
+        android:label="fragment_pdf_viewer"
+        tools:layout="@layout/fragment_pdf_viewer">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="resourceId"
+            app:argType="integer" />
+        <argument
+            android:name="file"
+            app:argType="string" />
+        <argument
+            android:name="classroomId"
+            app:argType="integer" />
+        <argument
+            android:name="lessonId"
+            app:argType="integer" />
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+        <argument
+            android:name="menu"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/videoViewerFragment"
+        android:name="com.omang.app.ui.videoViewer.fragment.VideoViewerFragment"
+        android:label="VideoViewerFragment">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <!--resourceId is video ID-->
+        <argument
+            android:name="resourceId"
+            app:argType="integer" />
+        <argument
+            android:name="file"
+            app:argType="string" />
+        <argument
+            android:name="classroomId"
+            app:argType="integer" />
+        <argument
+            android:name="lessonId"
+            app:argType="integer" />
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+        <argument
+            android:name="menu"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/imageViewerFragment"
+        android:name="com.omang.app.ui.imageViewer.fragment.ImageViewerFragment"
+        android:label="fragment_image_viewer"
+        tools:layout="@layout/fragment_image_viewer">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="resourceId"
+            app:argType="integer" />
+        <argument
+            android:name="file"
+            app:argType="string" />
+        <argument
+            android:name="classroomId"
+            app:argType="integer" />
+        <argument
+            android:name="lessonId"
+            app:argType="integer" />
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+        <argument
+            android:name="menu"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/webViewerFragment"
+        android:name="com.omang.app.ui.webViewer.fragment.WebViewerFragment"
+        android:label="fragment_web_viewer"
+        tools:layout="@layout/fragment_web_viewer">
+
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="weblinkData"
+            app:argType="com.omang.app.data.model.explore.WebItem" />
+        <argument
+            android:name="lessonId"
+            app:argType="integer" />
+        <argument
+            android:name="classroomId"
+            app:argType="integer" />
+        <argument
+            android:name="menu"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/testResultDetailsFragment"
+        android:name="com.omang.app.ui.test.TestResultDetailsFragment"
+        android:label="fragment_test_result_details"
+        tools:layout="@layout/fragment_test_result_details">
+        <argument
+            android:name="testId"
+            app:argType="integer" />
+        <argument
+            android:name="testName"
+            app:argType="string" />
+    </fragment>
+
+    <include app:graph="@navigation/navigation_unit_test" />
+
+</navigation>

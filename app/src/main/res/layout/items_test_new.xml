@@ -1,0 +1,239 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="newTest"
+            type="com.omang.app.data.database.test.TestEntity" />
+
+        <variable
+            name="itemClickListener"
+            type="com.omang.app.ui.listeners.ClickListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_new_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:rippleColor="@color/color_light_blue"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_expired_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_4sdp">
+
+            <TextView
+                android:id="@+id/txt_instruction_label"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0.5"
+                android:layout_marginStart="@dimen/card_item_start_margin"
+                android:layout_marginTop="@dimen/card_item_top_margin"
+                android:layout_marginBottom="16dp"
+                android:text="@string/instruction"
+                android:textColor="@color/title_grey"
+                app:layout_constraintBottom_toTopOf="@+id/tv_time_label"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title"
+                tools:text="Instruction" />
+
+            <TextView
+                android:id="@+id/tv_time_label"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0.5"
+                android:layout_marginStart="@dimen/card_item_start_margin"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/time"
+                android:textColor="@color/title_grey"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/txt_instruction_label"
+                tools:layout_editor_absoluteY="174dp" />
+
+
+            <TextView
+                android:id="@+id/textView20"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_colon"
+                android:textColor="@color/text_content_color"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_time_label"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="@+id/tv_time_label"
+                tools:text=":" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/TextAppearance.Omang.BodySmall"
+                end_time="@{newTest.endTime}"
+                start_time="@{newTest.startTime}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/card_item_start_margin"
+                android:layout_marginEnd="@dimen/card_item_end_margin"
+                android:textColor="@color/title_grey"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_time_label"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="@+id/tv_time_label"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="robinrj@sample.com" />
+
+
+            <TextView
+                android:id="@+id/textView19"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_colon"
+                android:textColor="@color/text_content_color"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_instruction_label"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="@+id/txt_instruction_label"
+                tools:text=":" />
+
+            <TextView
+                android:id="@+id/txt_instruction"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/card_item_start_margin"
+                android:layout_marginEnd="@dimen/card_item_end_margin"
+                android:text="@{newTest.instructions}"
+                android:textColor="@color/title_grey"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_instruction_label"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="@+id/txt_instruction_label"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="robinrj@sample.com" />
+
+            <TextView
+                android:id="@+id/txt_date"
+                style="@style/TextAppearance.Omang.TitleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_peacock_blue"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/txt_month"
+                app:layout_constraintEnd_toStartOf="@+id/view"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:start_time="@{newTest.startTime}"
+                tools:text="25" />
+
+            <TextView
+                android:id="@+id/txt_month"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/title_grey"
+                app:end_time="@{newTest.endTime}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txt_date"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/txt_date"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Feb" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/divider_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                style="@style/TextAppearance.Omang.BodyMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/card_item_start_margin"
+                android:layout_marginEnd="@dimen/card_item_end_margin"
+                android:text="@{newTest.name}"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toEndOf="@+id/view"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="DOE Final test" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/clock"
+                android:src="@drawable/clock"
+                app:end_time="@{newTest.endTime}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.50"
+                app:layout_constraintStart_toEndOf="@+id/txt_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:start_time="@{newTest.startTime}" />
+
+            <TextView
+                android:id="@+id/txt_min"
+                style="@style/TextAppearance.Omang.BodySmall"
+                test_end_time="@{newTest.endTime}"
+                test_start_time="@{newTest.startTime}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textColor="@color/title_grey"
+                android:textSize="@dimen/_7ssp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:text="30 min" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.85" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.40" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
+

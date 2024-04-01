@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ui.home.activity.HomeActivity">
+
+    <TextView
+        android:id="@+id/txt_no_contents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:text="@string/release_date"
+        android:textColor="@color/color_greyish_brown"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/viewpager"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/flTab"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_new_test"
+            style="@style/Omang.View.Rounded"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:paddingEnd="@dimen/_30sdp"
+            android:text="@string/new_test"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_6sdp"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_attempted"
+            style="@style/Omang.View.Rounded"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/attempted"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_6sdp" />
+
+    </FrameLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flTab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

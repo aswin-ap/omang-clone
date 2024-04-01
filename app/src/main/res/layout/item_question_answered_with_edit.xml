@@ -1,0 +1,179 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_mylibrary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/color_white"
+    app:cardElevation="@dimen/_2sdp"
+    app:cardUseCompatPadding="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/txt_date"
+            style="@style/TextAppearance.Omang.BodyMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Q."
+            android:textColor="@color/color_peacock_blue"
+            android:textSize="@dimen/_8sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/lyt_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/iv_edit"
+            app:layout_constraintStart_toEndOf="@+id/txt_question_number"
+            app:layout_constraintTop_toTopOf="@+id/txt_question_number">
+
+            <TextView
+                android:id="@+id/tv_question"
+                style="@style/TextAppearance.Omang.BodyMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:textColor="@color/color_greyish_brown"
+                android:textSize="@dimen/_8ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/iv_edit"
+                app:layout_constraintStart_toEndOf="@+id/txt_question_number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Where does it come from, Contrary to popular belief, Lorem Ipsum is not simply random text.?" />
+
+            <ImageView
+                android:id="@+id/iv_question"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:visibility="gone"
+                app:shapeAppearanceOverlay="@style/circleImageView" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_question_number"
+            style="@style/TextAppearance.Omang.BodyMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/deep_blue"
+            android:textSize="@dimen/_8sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_date"
+            app:layout_constraintStart_toEndOf="@+id/txt_date"
+            app:layout_constraintTop_toTopOf="@+id/txt_date"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/txt_your_answer_label"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/your_answer_test"
+            android:textColor="@color/progress_seventy"
+            android:textFontWeight="800"
+            android:textSize="@dimen/_7ssp"
+            app:layout_constraintStart_toStartOf="@+id/txt_date"
+            app:layout_constraintTop_toBottomOf="@+id/lyt_question" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_edit"
+            app:layout_constraintStart_toEndOf="@+id/txt_your_answer_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_your_answer_label">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/lyt_tv_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/white"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_3sdp">
+
+                    <TextView
+                        android:id="@+id/tv_answer"
+                        style="@style/TextAppearance.Omang.BodySmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_3sdp"
+                        android:includeFontPadding="false"
+                        android:padding="@dimen/_3sdp"
+                        android:textColor="@color/progress_seventy"
+                        tools:text="15" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/lyt_iv_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/white"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_answer"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/dummy"
+                        android:hardwareAccelerated="false"
+                        app:shapeAppearanceOverlay="@style/circleImageViewBorder5" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

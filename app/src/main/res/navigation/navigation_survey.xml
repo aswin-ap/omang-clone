@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_survey"
+    app:startDestination="@id/surveyFragment">
+
+    <fragment
+        android:id="@+id/surveyFragment"
+        android:name="com.omang.app.ui.survey.SurveyFragment"
+        android:label="SurveyFragment"
+        tools:layout="@layout/fragment_survey">
+        <action
+            android:id="@+id/action_surveyFragment_to_surveyNewFragment"
+            app:destination="@id/surveyNewFragment" />
+        <action
+            android:id="@+id/action_surveyFragment_to_surveyAttemptedFragment"
+            app:destination="@id/surveyAttemptedFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/surveyNewFragment"
+        android:name="com.omang.app.ui.survey.SurveyNewFragment"
+        android:label="SurveyNewFragment"
+        tools:layout="@layout/fragment_survey_new" />
+    <fragment
+        android:id="@+id/surveyAttemptedFragment"
+        android:name="com.omang.app.ui.survey.SurveyAttemptedFragment"
+        android:label="SurveyAttemptedFragment"
+        tools:layout="@layout/fragment_survey_attempted" />
+</navigation>

@@ -1,0 +1,114 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="expired"
+            type="com.omang.app.data.database.test.TestEntity" />
+
+        <variable
+            name="itemClickListener"
+            type="com.omang.app.ui.listeners.ClickListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_mylibrary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/_2sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardMaxElevation="@dimen/_2sdp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:rippleColor="@color/color_light_blue"
+        app:strokeWidth="0dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_expired_test"
+            android:layout_width="match_parent"
+            android:padding="@dimen/_5sdp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txt_subject_label"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0.1"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/expired_On"
+                android:textColor="@color/title_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+            <TextView
+                android:id="@+id/textView17"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0.1"
+                android:text="@string/text_colon"
+                android:textColor="@color/color_greyish_brown"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_subject_label"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="@+id/txt_subject_label" />
+
+            <TextView
+                android:id="@+id/tv_expired_on"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:textColor="@color/title_grey"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_subject_label"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="@+id/txt_subject_label"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus. eget risus. Sed fermentum odio cursus erat suscipit, id elementum nulla volutpat. Ut vitae ultrices arcu. Mauris molestie orci eget hendrerit bibendum. " />
+
+            <TextView
+                android:id="@+id/txt_title"
+                style="@style/TextAppearance.Omang.BodyMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:text="@{expired.name}"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="DOE Final test" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="492dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.23" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

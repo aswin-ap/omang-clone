@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ui.home.activity.HomeActivity">
+
+    <TextView
+        android:id="@+id/txt_no_contents"
+        style="@style/TextAppearance.Omang.BodySmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_classroom_data"
+        android:textColor="@color/color_greyish_brown"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:gravity="center|end"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_update_arrow"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_update_arrow"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_updates_available"
+            style="@style/TextAppearance.Omang.BodySmallInter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:text="@string/updates_available"
+            android:textAlignment="textEnd"
+            android:textColor="@color/deep_blue"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_7ssp"
+            android:visibility="gone" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:elevation="0dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/sync_background"
+            app:cardCornerRadius="@dimen/_2sdp">
+
+            <TextView
+                android:id="@+id/tv_last_sync"
+                style="@style/TextAppearance.Omang.BodySmallInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_3sdp"
+                android:text="@string/last_updated"
+                android:textAlignment="textEnd"
+                android:textColor="@color/deep_blue"
+                android:textSize="@dimen/_5ssp"
+                android:visibility="visible" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_get_updates"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:padding="@dimen/_2sdp"
+            app:cornerRadius="@dimen/_3sdp"
+            app:icon="@drawable/ic_sync_button"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="@dimen/_15sdp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_lessons"
+        style="@style/Omang.Tab.RoundedStart"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:letterSpacing="0"
+        android:text="@string/lessons"
+        android:textAllCaps="true"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/_5ssp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_doc_videos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content_layout" />
+
+    <Button
+        android:id="@+id/btn_doc_videos"
+        style="@style/Omang.Tab.NotRounded"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/poppins_medium"
+        android:letterSpacing="0"
+        android:text="@string/docs_amp_videos"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/_5ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_lessons"
+        app:layout_constraintEnd_toStartOf="@+id/btn_platforms"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_lessons"
+        app:layout_constraintTop_toTopOf="@+id/btn_lessons" />
+
+    <Button
+        android:id="@+id/btn_platforms"
+        style="@style/Omang.Tab.NotRounded"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:text="@string/platforms"
+        android:textAllCaps="true"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/_5ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_doc_videos"
+        app:layout_constraintEnd_toStartOf="@+id/btn_live_class"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_doc_videos"
+        app:layout_constraintTop_toTopOf="@+id/btn_doc_videos" />
+
+    <Button
+        android:id="@+id/btn_live_class"
+        style="@style/Omang.Tab.NotRounded"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:text="@string/title_feeds"
+        android:textAllCaps="true"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/_5ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_platforms"
+        app:layout_constraintEnd_toStartOf="@+id/btn_chat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_platforms"
+        app:layout_constraintTop_toTopOf="@+id/btn_platforms" />
+
+        <Button
+            android:id="@+id/btn_chat"
+            style="@style/Omang.Tab.RoundedEnd"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:text="@string/title_tests"
+            android:textAllCaps="true"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_5ssp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_live_class"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_live_class"
+            app:layout_constraintTop_toTopOf="@+id/btn_live_class" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_platforms" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/lyt_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="content_layout,btn_lessons,btn_doc_videos,btn_live_class,btn_platforms,viewpager" />
+</androidx.constraintlayout.widget.ConstraintLayout>

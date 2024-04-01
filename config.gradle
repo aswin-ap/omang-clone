@@ -1,0 +1,99 @@
+ext {
+    core = [
+
+            compileSDK : 33,
+//            buildTools : '29.0.3',
+            minSDK     : 29,
+            targetSDK  : 33,
+
+            appId      : 'com.omang.app.one',
+            namespace  : 'com.omang.app',
+
+//            dev internal release
+            versionCode: 1171,
+            versionName: '1.0.171'
+
+//            alpha, client internal, training releases
+/*            versionCode: 1006,
+            versionName: '0.1.6'
+            */
+
+//            beta, production releases
+       /*     versionCode: 1030,
+            versionName: '1.1.30'*/
+    ]
+
+    CSDK_PROD = [
+
+            TB8505X: '\"acaefde4569244b10f04eff2c037ca415897ffbc8c20c98d80c5a036666160b0b\"',
+            TB300XU: '\"181213202cf6919ef8d2dba0a7d7050fd92e04eba2c14f2a59bb0a7c5321a70dc60e8be41\"',//m8 4th
+            TB310XU: '\"a52829fb1c7916cec1cd2aaccc335ec4ab9c7458f40fe0d0f8b1200e2a6ad8e86\"',//m9,
+
+    ]
+
+    CSDK_DEV = [
+
+            /*
+                below debug license are for Allwin's devices
+            */
+            TB8505X: '\"16221320283d19182115f2a847ccb97210a8c151922f34c1f209529f6a97e84a646da8b61\"',//m8
+            TB300XU: '\"181213202cf6919ef8d2dba0a7d7050fd92e04eba2c14f2a59bb0a7c5321a70dc60e8be41\"',//m8 4th
+//            TB310XU: '\"192204202c9b64da487b03c90a7eb977162b936f32f2e6c89d4646856df320589dded6d5f\"',//m9
+            TB310XU: '\"132604202c9b64da487b03c90a7eb977162b936f32f2e6c89d4646856df320589dded6d5f\"',//m9
+
+    ]
+
+    signings = [
+
+            filePath     : '\"/home/cubet/Work/Keystore/One-Omang/one-omang.jks\"',
+            storePassword: '\"one-omang\"',
+            alias        : '\"one-omang\"',
+            password     : '\"one-omang\"'
+
+    ]
+
+    BASE_URLS = [
+
+            PROD   : '\"https://omanghub-live-api.cubettech.in/api/app/\"',
+            UAT    : '\"https://omanghub-uat-api.cubettech.in/api/app/\"',
+            STAGING: '\"https://omanghub-api.cubettech.in/api/app/\"'
+
+    ]
+
+    DECYPHER_KEY = [
+
+            DUMMY: '\"sdfsdfsdfsdf\"',
+            PROD : '\"hj-8JDSd8swKJsw!3_k@!cxfvS908\"'
+
+    ]
+
+    versions = [
+
+            work_runtime_ktx            : '2.8.1',
+            core_ktx                    : '1.10.1',
+            RETROFIT_VERSION            : '2.9.0',
+            DAGGER_VERSION              : '2.12',
+            roomVersion                 : '2.5.2',
+            FIREBASE_BOM                : '32.1.0',
+            FIREBASE_MESSAGING_VERSION  : '23.1.2',
+            FIREBASE_CRASHLYTICS_VERSION: "18.3.7",
+            FIREBASE_ANALYTICS_VERSION  : "21.2.2",
+            PR_DOWNLODER_VERSION        : "0.6.0",
+            GOOGLE_SCANNER_VERSION      : "16.0.0",
+            PLAYSTORE_BASE_VERSION      : "18.2.0",
+            CAMERAX_VERSION             : "1.2.3",
+            IMAGE_CROPPER_VERSION       : "2.8.0",
+            SDP_SSP                     : "1.1.0",
+            SHIMMER                     : "0.5.0",
+            ZOOMABLE_IMAGEVIEW          : "2.0.0",
+            GLIDE                       : "4.15.1",
+            LOTTIE                      : "6.0.0",
+            EXOPLAYER                   : "1.1.0",
+            COIL                        : "2.4.0",
+            PDF_VIEWER                  : "2.8.2",
+            MP_CHART                    : "3.1.0",
+            EXPANDABLE_TEXTVIEW         : "2.0.0",
+            BLURRY                      : "4.0.1"
+
+    ]
+}

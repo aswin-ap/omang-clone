@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:backgroundTint="@color/white"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                app:cardCornerRadius="@dimen/_50sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.528"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@color/progress_eighty_secondary"
+                    android:hardwareAccelerated="false"
+                    android:src="@drawable/report_issue_placeholder" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_50sdp"
+                android:background="@drawable/mood_dialog_vector"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                <TextView
+                    android:id="@+id/hiTextView"
+                    style="@style/TextAppearance.Omang.TitleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_38sdp"
+                    android:fontFamily="@font/inter_medium"
+                    android:gravity="center"
+                    android:padding="@dimen/_3sdp"
+                    android:text="Hi John Snow"
+                    android:textColor="@color/mode_meter_blue"
+                    android:textSize="@dimen/_11ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/howAreYouTextView"
+                    style="@style/TextAppearance.Omang.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="How are you feeling today?"
+                    android:textColor="@color/mode_meter_blue"
+                    android:textSize="@dimen/_8ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/hiTextView" />
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_happy"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/mood_meter_icon_bg"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+                <ImageView
+                    android:id="@+id/iv_happy"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:src="@drawable/mood_happy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/inter_bold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="Happy"
+                    android:textColor="@color/mode_meter_blue"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_happy" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_angry"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@drawable/mood_meter_icon_bg"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_happy"
+                app:layout_constraintStart_toEndOf="@+id/cl_happy"
+                app:layout_constraintTop_toTopOf="@+id/cl_happy">
+
+                <ImageView
+                    android:id="@+id/iv_angry"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:src="@drawable/mood_angry"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/inter_bold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="Angry"
+                    android:textColor="@color/mode_meter_blue"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_angry" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_meh"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@drawable/mood_meter_icon_bg"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_angry"
+                app:layout_constraintStart_toEndOf="@+id/cl_angry"
+                app:layout_constraintTop_toTopOf="@+id/cl_angry">
+
+                <ImageView
+                    android:id="@+id/iv_meh"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:src="@drawable/mood_meh"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/inter_bold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="Meh"
+                    android:textColor="@color/mode_meter_blue"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_meh" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--            FOR BOTTOM -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_sad"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/mood_meter_icon_bg"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_anxious"
+                app:layout_constraintEnd_toStartOf="@+id/cl_anxious"
+                app:layout_constraintTop_toTopOf="@+id/cl_anxious">
+
+                <ImageView
+                    android:id="@+id/iv_sad"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:src="@drawable/mood_sad"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/inter_bold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="Sad"
+                    android:textColor="@color/mode_meter_blue"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_sad" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_anxious"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/mood_meter_icon_bg"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_excited"
+                app:layout_constraintEnd_toStartOf="@+id/cl_excited"
+                app:layout_constraintTop_toTopOf="@+id/cl_excited">
+
+                <ImageView
+                    android:id="@+id/iv_anxious"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:src="@drawable/mood_anxios"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/inter_bold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="Anxious"
+                    android:textColor="@color/mode_meter_blue"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_anxious" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_excited"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:background="@drawable/mood_meter_icon_bg"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_happy">
+
+                <ImageView
+                    android:id="@+id/iv_exited"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:src="@drawable/mood_excited"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/inter_bold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_1sdp"
+                    android:text="Excited"
+                    android:textColor="@color/mode_meter_blue"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_exited" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
+
+
+    <!--            <FrameLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:background="@drawable/moode_meter_bg"-->
+    <!--                app:layout_constraintDimensionRatio="H,1:1.5"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <androidx.constraintlayout.widget.Guideline-->
+    <!--                android:id="@+id/guideline"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                app:layout_constraintGuide_percent="0.23" />-->
+
+    <!--            <androidx.constraintlayout.widget.Guideline-->
+    <!--                android:id="@+id/guideline2"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical"-->
+    <!--                app:layout_constraintGuide_percent="0.18" />-->
+
+    <!--            <androidx.constraintlayout.widget.Guideline-->
+    <!--                android:id="@+id/guideline3"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical"-->
+    <!--                app:layout_constraintGuide_percent="0.83" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/hiTextView"-->
+    <!--                style="@style/TextAppearance.Omang.TitleLarge"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginBottom="@dimen/_10sdp"-->
+    <!--                android:fontFamily="@font/inter_medium"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="Hi"-->
+    <!--                android:textColor="@color/mode_meter_blue"-->
+    <!--                android:textSize="@dimen/_12ssp"-->
+    <!--                app:layout_constraintEnd_toEndOf="@+id/guideline3"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/guideline2"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/guideline" />-->
+
+    <!--            <androidx.appcompat.widget.AppCompatTextView-->
+    <!--                android:id="@+id/howAreYouTextView"-->
+    <!--                style="@style/TextAppearance.Omang.TitleMedium"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="26dp"-->
+    <!--                android:layout_marginBottom="@dimen/_15sdp"-->
+    <!--                android:fontFamily="@font/inter_regular"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="How are you feeling today?"-->
+    <!--                android:textColor="@color/mode_meter_blue"-->
+    <!--                android:textSize="@dimen/_8ssp"-->
+    <!--                app:layout_constraintEnd_toEndOf="@+id/guideline3"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/guideline2"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/hiTextView" />-->
+
+    <!--            <androidx.recyclerview.widget.RecyclerView-->
+    <!--                android:id="@+id/rv_moods"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerHorizontal="true"-->
+    <!--                android:layout_marginTop="@dimen/_5sdp"-->
+    <!--                android:layout_marginBottom="@dimen/_15sdp"-->
+    <!--                android:background="@android:color/transparent"-->
+    <!--                android:gravity="center"-->
+    <!--                android:paddingBottom="@dimen/_5sdp"-->
+    <!--                app:layout_constraintEnd_toEndOf="@+id/guideline3"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/guideline2"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/howAreYouTextView">-->
+
+    <!--            </androidx.recyclerview.widget.RecyclerView>-->

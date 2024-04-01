@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/progress_eighty_secondary"
+        tools:context=".ui.drops.fragment.DropsFragment">
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_16sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="670dp"
+                android:minHeight="200dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_50sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:hardwareAccelerated="false"
+                        android:background="@color/mode_meter_blue"
+                        android:src="@drawable/report_issue_placeholder" />
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/hiTextView"
+                    style="@style/TextAppearance.Omang.UpdateTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:lineHeight="26sp"
+                    android:lineSpacingExtra="-4dp"
+                    android:text="Hi"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_8ssp"
+                    app:layout_constraintStart_toEndOf="@+id/cardView2"
+                    app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+                <TextView
+                    android:id="@+id/hiTextView2"
+                    style="@style/TextAppearance.Omang.TitleSmallSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="40dp"
+                    android:gravity="start"
+                    android:text="@string/drop_balance"
+                    android:textColor="@color/grey_tech_support_title"
+                    android:textFontWeight="400"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+                    app:layout_constraintStart_toEndOf="@+id/cardView2"
+                    app:layout_constraintTop_toBottomOf="@+id/hiTextView"
+                    app:layout_constraintVertical_bias="0.166" />
+
+                <TextView
+                    android:id="@+id/tv_drop_point"
+                    style="@style/TextAppearance.Omang.UpdateTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingStart="4dp"
+                    android:layout_marginBottom="-1dp"
+                    android:text="0"
+                    android:textColor="@color/mode_meter_blue"
+                    android:textFontWeight="800"
+                    android:textSize="@dimen/_7ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/hiTextView2"
+                    app:layout_constraintStart_toEndOf="@+id/hiTextView2"
+                    app:layout_constraintTop_toTopOf="@+id/hiTextView2"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:src="@drawable/ic_drop2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_drop_point"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+</layout>

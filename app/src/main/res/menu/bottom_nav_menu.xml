@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:menuCategory="secondary"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_feed"
+        android:menuCategory="secondary"
+        android:title="@string/title_feeds" />
+
+    <item
+        android:id="@+id/navigation_add"
+        android:menuCategory="secondary"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_drop"
+        android:icon="@drawable/ic_drop"
+        android:menuCategory="secondary"
+        android:title="@string/title_drops" />
+
+    <item
+        android:id="@+id/navigation_camera"
+        android:icon="@drawable/ic_camera"
+        android:menuCategory="secondary"
+        android:title="@string/camera" />
+
+</menu>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_unit_test"
+    app:startDestination="@id/testStartFragment"
+    tools:layout="@layout/fragment_unit_test">
+
+    <fragment
+        android:id="@+id/unitTestFragment"
+        android:name="com.omang.app.ui.test.UnitTestFragment"
+        android:label="UnitTestFragment"
+        tools:layout="@layout/fragment_unit_test">
+        <action
+            android:id="@+id/action_testFragment_to_testNewFragment"
+            app:destination="@id/testNewFragment" />
+        <action
+            android:id="@+id/action_testFragment_to_testAttemptedFragment"
+            app:destination="@id/testAttemptedFragment" />
+        <action
+            android:id="@+id/action_testFragment_to_testExpiredFragment"
+            app:destination="@id/testExpiredFragment" />
+        <action
+            android:id="@+id/action_testFragment_to_testStartFragment"
+            app:destination="@id/testStartFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/testExpiredFragment"
+        android:name="com.omang.app.ui.test.TestExpiredFragment"
+        android:label="TestExpiredFragment"
+        tools:layout="@layout/fragment_text_expired" />
+    <fragment
+        android:id="@+id/testAttemptedFragment"
+        android:name="com.omang.app.ui.test.TestAttemptedFragment"
+        android:label="TestAttemptedFragment"
+        tools:layout="@layout/fragment_test_attempted" />
+    <fragment
+        android:id="@+id/testNewFragment"
+        android:name="com.omang.app.ui.test.TestNewFragment"
+        android:label="TestNewFragment"
+        tools:layout="@layout/fragment_test_new" />
+    <fragment
+        android:id="@+id/testStartFragment"
+        android:name="com.omang.app.ui.test.TestStartFragment"
+        android:label="TestStartFragment">
+        <action
+            android:id="@+id/action_testStartFragment_to_testQuestionFragment"
+            app:destination="@id/testQuestionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/testQuestionFragment"
+        android:name="com.omang.app.ui.test.TestQuestionFragment"
+        android:label="TestQuestionFragment">
+        <action
+            android:id="@+id/action_testQuestionFragment_to_testSubmitFragment"
+            app:destination="@id/testSubmitFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/testSubmitFragment"
+        android:name="com.omang.app.ui.test.TestSubmitFragment"
+        android:label="TestSubmitFragment">
+        <action
+            android:id="@+id/action_testSubmitFragment_to_testQuestionFragment"
+            app:destination="@id/testQuestionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_testSubmitFragment_to_testCompleteFragment"
+            app:destination="@id/testCompleteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/testCompleteFragment"
+        android:name="com.omang.app.ui.test.TestCompleteFragment"
+        android:label="TestCompleteFragment" />
+</navigation>

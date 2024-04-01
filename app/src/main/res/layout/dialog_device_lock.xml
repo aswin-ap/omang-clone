@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:elevation="@dimen/_10sdp"
+    app:cardCornerRadius="0dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_faded"
+    android:gravity="center"
+    android:padding="@dimen/_15sdp">
+
+    <ImageView
+        android:id="@+id/iv_warning"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_locked"
+        app:layout_constraintEnd_toStartOf="@+id/tv_locked"
+        app:layout_constraintTop_toTopOf="@+id/tv_locked"
+        app:srcCompat="@drawable/ic_warning" />
+
+    <TextView
+        android:id="@+id/tv_locked"
+        style="@style/TextAppearance.Omang.TitleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/unassign_user" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="tv_locked, iv_warning" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        style="@style/TextAppearance.Omang.BodyOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        tools:text="@string/unassign_description"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_locked" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

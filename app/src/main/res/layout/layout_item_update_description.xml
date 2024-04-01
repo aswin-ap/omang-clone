@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="text"
+            type="String" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Home"
+            android:textColor="@color/color_grey"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_dropBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/color_peacock_blue"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/user"
+                    android:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_dropBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textColor="@color/color_white"
+                    android:textSize="18sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/info_remove"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/drop"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_csdk"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/btn_camera"
+            android:src="@drawable/ic_csdk"
+            android:visibility="gone" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_camera"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/btn_fullscreen"
+            android:src="@drawable/ic_camera"
+            android:visibility="visible" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_fullscreen"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/btn_bluetooth"
+            android:src="@drawable/orientation"
+            android:visibility="gone" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_bluetooth"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/btn_wifi"
+            android:src="@drawable/ic_bluetooth"
+            android:visibility="visible" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_wifi"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/ln_battery"
+            android:src="@drawable/wifi"
+            android:visibility="visible" />
+
+
+        <LinearLayout
+            android:id="@+id/ln_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/rl_notification"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_battery"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/bat_j" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_bat_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="15%"
+                android:textColor="@color/color_grey"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rl_notification"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/img_brightness">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_dot_notification"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/bg_dot"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_notification"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/bell"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_brightness"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/ib_sync"
+            android:src="@drawable/brightness"
+            android:visibility="visible" />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ib_sync"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/img_cubetlogo"
+            android:background="@drawable/bg_rectangle"
+            android:src="@drawable/ic_sync"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_cubetlogo"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/txt_clock_one"
+            app:srcCompat="@drawable/cubet_logo" />
+
+        <TextClock
+            android:id="@+id/txt_clock_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:format12Hour="hh:mm a"
+            android:textColor="@color/color_greyish_brown"
+            android:textSize="12sp" />
+
+        <TextClock
+            android:id="@+id/txt_clock_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_clock_one"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:format12Hour="MMM dd"
+            android:textColor="@color/color_greyish_brown"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</layout>

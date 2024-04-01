@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:elevation="@dimen/_10sdp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_bluetooth"
+                style="@style/settings_button"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/ic_settings_bluetooth"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_brightness"
+                style="@style/settings_button"
+                android:background="@drawable/setting_bt_bg_enabled"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_brightness_white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_wifi"
+                style="@style/settings_button"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_wifi_white" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDataEnable"
+                style="@style/settings_button"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/ic_mobile_data_on" />
+       <!--     android:background="@drawable/setting_bt_bg_enabled"-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDataDisable"
+                style="@style/settings_button"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/ic_mobile_data_off" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ib_sync"
+                style="@style/settings_button"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/ic_refresh_white"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ib_csdk"
+                style="@style/settings_button"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_9sdp"
+                android:src="@drawable/ic_shield_white"
+                android:visibility="gone" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

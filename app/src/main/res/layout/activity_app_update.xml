@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.appupdate.activity.AppUpdateActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wave_with_cloud" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="442dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="120dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="23dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/rocket" />
+
+    <ImageView
+        android:id="@+id/iv_settings"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/ic_setting_white" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintDimensionRatio="0.7:0.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shadow_rectangle" />
+
+    <TextView
+        android:id="@+id/tv_whats_new"
+        style="@style/TextAppearance.Omang.UpdateTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_18"
+        android:text="@string/whats_new_ver"
+        android:textAllCaps="false"
+        android:textColor="@color/deep_blue"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+
+    <TextView
+        android:id="@+id/tv_version"
+        style="@style/TextAppearance.Omang.TitleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_18"
+        android:textAllCaps="false"
+        android:textColor="@color/deep_blue"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:text="V 2.0.4" />
+
+
+    <TextView
+        android:id="@+id/tv_update_quote"
+        style="@style/TextAppearance.Omang.BodySmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_before"
+        android:textColor="@color/deep_blue"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_update_date"
+        app:layout_constraintEnd_toStartOf="@+id/tv_update_date" />
+
+    <TextView
+        android:id="@+id/tv_update_date"
+        style="@style/TextAppearance.Omang.TitleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_18"
+        android:textAllCaps="false"
+        android:textColor="@color/deep_blue"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_version"
+        tools:text="24 May 2023" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <Button
+        android:id="@+id/btnSkip"
+        style="@style/TextAppearance.Omang.TitleSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_18"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:backgroundTint="@color/white_faded"
+        android:padding="@dimen/padding_small"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnUpdateNow"
+        style="@style/TextAppearance.Omang.BodySmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_18"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:backgroundTint="@color/deep_blue"
+        android:padding="@dimen/padding_small"
+        android:text="@string/update_now"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        style="@style/TextAppearance.Omang.BodySmall"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_margin="@dimen/_10sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/tv_update_date"
+        tools:layout_editor_absoluteX="13dp" />
+
+    <!--    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_10sdp" >-->
+
+    <TextView
+        android:id="@+id/tv_log"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_10sdp"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical"
+        android:text="Logs"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btnSkip"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description"
+        tools:layout_editor_absoluteX="13dp" />
+    <!--
+
+        </ScrollView>
+    -->
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/deep_blue"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/download_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_update_date"
+        app:trackColor="@color/color_silver" />
+
+    <ImageView
+        android:id="@+id/iv_update_done"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_download_completed"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/tv_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/color_shamrock_green" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        style="@style/TextAppearance.Omang.BodySmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:gravity="center"
+        android:text="@string/no_updates"
+        android:textSize="@dimen/_8ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/download_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_update_date" />
+
+    <LinearLayout
+        android:id="@+id/download_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_18"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btnUpdateNow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextAppearance.Omang.TitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/downloading" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_percentage"
+                style="@style/TextAppearance.Omang.TitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="60%" />
+
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/pb_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:indicatorColor="@color/color_shamrock_green"
+            app:trackColor="@color/white_faded" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

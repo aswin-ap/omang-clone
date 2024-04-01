@@ -1,0 +1,33 @@
+package com.omang.app.utils
+
+enum class NotificationUtil(var type: Int) {
+    LOCK_DEVICE(100),
+    UNLOCK_DEVICE(101),
+    USER_ASSIGN(102),
+    USER_UNASSIGN(103),
+    PIN_DEVICE(104),
+    UNPIN_DEVICE(105),
+    TURN_WIFI_ON(106),
+    TURN_WIFI_OFF(107),
+    ACTIVATE_CSDK(108),
+    DEACTIVATE_CSDK(109),
+    MANUAL_CLEAN_DEVICE(110),
+    APP_UPDATE(111),
+    CUSTOM_NOTIFICATION(112),
+    MY_LIBRARY(113),
+    MY_WEBPLATFORM(114),
+    CLASSROOM(115),
+    CLASSROOM_RESOURCE(116),
+    MCQ_TEST(118),
+    WEB_PLATFORM(117),
+    DOE(120),
+    PSM(121),
+    USER_ACTIVATE(122),
+    USER_DEACTIVATE(123),
+    USER_PROFILE(124),
+    ANALYTICS(125);
+
+    fun value(): Int {
+        return type
+    }
+}

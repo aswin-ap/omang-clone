@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_6sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rb_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_rating"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/progress_eighty_secondary"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fab_support"
+                    android:layout_width="@dimen/_37sdp"
+                    android:layout_height="@dimen/_37sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    app:cardBackgroundColor="@color/color_light_blue"
+                    app:cardCornerRadius="@dimen/_43sdp"
+                    app:shapeAppearanceOverlay="@style/circleImageView">
+
+                    <ImageView
+                        android:id="@+id/iv_tech_support"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/report_issue_placeholder" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/TextAppearance.Omang.BodySmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_weight="1"
+                    android:text="@string/please_rate"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/white"
+                    android:progressTint="@color/deep_blue"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_comments"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_weight="1"
+            android:text="@string/comments_optional"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_rating" />
+
+        <EditText
+            android:id="@+id/ed_comment"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:gravity="start|top"
+            android:hint="@string/enter_here"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_comments"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit"
+            style="@style/Omang.Button.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/deep_blue"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_comment" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,313 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.OmangKtn" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_deep_blue</item>
+        <item name="colorPrimaryVariant">@color/color_deep_blue</item>
+        <!--        <item name="colorAccent">@color/color_deep_blue</item>-->
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/light_blue</item>
+        <item name="colorSecondaryVariant">@color/light_blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="myCustomAppBarTheme" parent="Theme.AppCompat.Light">
+        <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
+        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleText</item>
+        <item name="titleTextStyle">@style/AppTheme.ActionBar.TitleText</item>
+        <item name="android:height">100dp</item>
+        <item name="height">100dp</item>
+    </style>
+
+    <style name="AppTheme.ActionBar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/color_grey</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Omang.Button.Rounded" parent="">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="Omang.Button.Filter" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@color/white</item>
+        <item name="iconGravity">start</item>
+        <item name="iconPadding">0dp</item>
+        <item name="cardCornerRadius">30dp</item>
+        <item name="iconSize">@dimen/_7sdp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="Omang.Card.Rounded" parent="">
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="Omang.Image.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Omang.Image.Rounded.Call" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="Omang.View.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_45sdp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Omang.TextInputLayout.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">25dp</item>
+        <item name="cornerSizeTopRight">25dp</item>
+        <item name="cornerSizeBottomLeft">25dp</item>
+        <item name="cornerSizeBottomRight">25dp</item>
+    </style>
+
+    <style name="Omang.Tab.RoundedStart" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/RoundedStart</item>
+        <item name="android:layout_height">45dp</item>
+        <!--     /\   <item name="fontFamily">@font/poppins_medium</item>-->
+    </style>
+
+    <style name="RoundedStart" parent="Widget.MaterialComponents.Button">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeTopLeft">18dp</item>
+        <item name="cornerSizeBottomLeft">18dp</item>
+    </style>
+
+    <style name="Omang.Tab.RoundedEnd" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/RoundedEnd</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+
+    <style name="Omang.Editext.Rounded" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="cornerFamily">rounded</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="backgroundTint">@color/color_white</item>
+    </style>
+
+    <style name="RoundedEnd" parent="Widget.MaterialComponents.Button">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerSizeTopRight">18dp</item>
+        <item name="cornerSizeBottomRight">18dp</item>
+    </style>
+
+    <style name="Omang.Tab.NotRounded" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/NotRounded</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+
+    <style name="NotRounded" parent="Widget.MaterialComponents.Button">
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+    </style>
+
+    <!--textAppearanceDisplayLarge	Regular 57sp
+    textAppearanceDisplayMedium	Regular 45sp
+    textAppearanceDisplaySmall	Regular 36sp
+    textAppearanceHeadlineLarge	Regular 32sp
+    textAppearanceHeadlineMedium	Regular 28sp
+    textAppearanceHeadlineSmall	Regular 24sp
+
+    textAppearanceTitleLarge	Regular 22sp
+    textAppearanceTitleMedium	Medium 16sp
+    textAppearanceTitleSmall	Medium 14sp
+
+    textAppearanceBodyLarge	Regular 16sp
+    textAppearanceBodyMedium	Regular 14sp
+    textAppearanceBodySmall	Regular 12sp
+
+    textAppearanceLabelLarge	Medium 14sp
+    textAppearanceLabelMedium	Medium 12sp
+    textAppearanceLabelSmall	Medium 11sp-->
+
+    <style name="TextAppearance.Omang.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/app_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textFontWeight">700</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Omang.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/app_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Omang.TitleMedium.Socket" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/app_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_6sdp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Omang.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/app_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_7ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/card_txt_primary</item>
+
+    </style>
+
+    <style name="TextAppearance.Omang.TitleSmallInter" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/app_font_secondary</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/card_txt_primary</item>
+
+    </style>
+
+    <style name="TextAppearance.Omang.UpdateTitleStyle" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/card_txt_secondary</item>
+    </style>
+
+    <style name="TextAppearance.Omang.TitleSmallSecondary" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/_7ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/card_txt_secondary</item>
+    </style>
+
+    <style name="TextAppearance.Omang.TitleSmallSecondaryInter" parent="TextAppearance.AppCompat.Body1">
+        <item name="fontFamily">@font/app_font_secondary</item>
+        <item name="android:textSize">@dimen/_7ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineSpacingExtra">@dimen/_2ssp</item>item>
+        <item name="android:textColor">@color/card_txt_secondary</item>
+    </style>
+
+    <style name="TextAppearance.Omang.textNewUpdate" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/_6ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/card_txt_new_update</item>
+    </style>
+
+    <style name="TextAppearance.Omang.textNewUpdateInter" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/app_font_secondary</item>
+        <item name="android:textSize">@dimen/_6ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/card_txt_new_update</item>
+    </style>
+
+    <style name="TextAppearance.Omang.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/app_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Omang.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/app_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Omang.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/app_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_6ssp</item>
+    </style>
+
+    <style name="TextAppearance.Omang.UnitTextStyle" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/app_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="lineHeight">@dimen/_12sdp</item>
+    </style>
+
+    <style name="TextAppearance.Omang.BodyOne" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/app_font</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_7ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lineSpacingExtra">0sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.Omang.BodySmallInter" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/app_font_secondary</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="AppSearchView.Omang.Search" parent="Widget.AppCompat.Light.SearchView">
+        <item name="fontFamily">@font/app_font_secondary</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/_6ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="mDialogTheme" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+    <style name="settings_button">
+        <item name="android:layout_width">@dimen/_40sdp</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="android:background">@drawable/setting_bt_bg_disabled</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.Material3.Dark">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/deep_blue</item>
+    </style>
+</resources>

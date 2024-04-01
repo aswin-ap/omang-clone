@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ui.admin.fragment.AppDiagnosticFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/llRun"
+            style="@style/Omang.Button.Rounded"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/deep_blue"
+            android:text="Run"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_7ssp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_my_classroom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!--  <LinearLayout
+              android:id="@+id/llRun"
+              android:layout_width="@dimen/_41sdp"
+              android:layout_height="@dimen/_21sdp"
+              android:layout_marginTop="@dimen/_12sdp"
+              android:layout_marginEnd="@dimen/_15sdp"
+              android:background="@drawable/bg_button_with_radius"
+              android:gravity="center"
+              android:orientation="horizontal"
+              app:layout_constraintBottom_toTopOf="@+id/cv_my_classroom"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintVertical_bias="0.0">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/_4sdp"
+                  android:fontFamily="@font/poppins_medium"
+                  android:gravity="center"
+                  android:lineSpacingExtra="@dimen/_2sdp"
+                  android:text="Run"
+                  android:textColor="@color/white"
+                  android:textSize="@dimen/_10ssp" />
+          </LinearLayout>-->
+
+        <TextView
+            android:id="@+id/textView23"
+            style="@style/TextAppearance.Omang.UpdateTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:text="App Diagnostics"
+            android:textColor="@color/deep_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLastUpdated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_tech_support_title"
+            android:textSize="@dimen/_6ssp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/llRun"
+            app:layout_constraintTop_toBottomOf="@+id/llRun" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_my_classroom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="33dp"
+            app:contentPadding="@dimen/margin_homecards_contentpadding"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_app_diagnostics"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_app_diagnostics" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,28 @@
+<resources>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="circleImageViewBorder5" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="customTextColor" format="color" />
+        <attr format="integer" name="limitedMaxLines"/>
+        <attr format="string" name="originalText"/>
+        <attr format="string" name="expandActionText"/>
+        <attr format="string" name="collapseActionText"/>
+        <attr format="string" name="expandActionColor"/>
+        <attr format="string" name="collapseActionColor"/>
+    </declare-styleable>
+
+</resources>

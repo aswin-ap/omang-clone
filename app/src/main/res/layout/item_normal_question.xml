@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_cv"
+    style="@style/Omang.Card.Rounded"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_20sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginBottom="@dimen/_3sdp"
+    android:layout_marginEnd="@dimen/_16sdp"
+    app:cardCornerRadius="@dimen/_3sdp"
+    app:cardElevation="@dimen/_2sdp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minWidth="@dimen/_150sdp"
+        android:paddingVertical="@dimen/_6sdp">
+
+
+        <RadioButton
+            android:id="@+id/option_answer"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/background_radio_button"
+            android:button="@null"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/option_answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_answer"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_greyish_brown"
+                android:textSize="@dimen/_7ssp"
+                android:visibility="visible"
+                tools:text="@string/lorem_ipsum" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_question"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="center"
+                android:hardwareAccelerated="false"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

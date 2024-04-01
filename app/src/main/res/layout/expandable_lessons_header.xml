@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/lyt_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_2sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp">
+
+
+            <ImageView
+                android:id="@+id/down_arrow"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_keyboard_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/color_light_blue">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_item"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:maxLines="1"
+                android:text="@string/lorem_ipsum"
+                android:textAllCaps="true"
+                android:textColor="@color/card_txt_primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_completed"
+                app:layout_constraintStart_toEndOf="@+id/down_arrow"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_completed"
+                style="@style/TextAppearance.Omang.TitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:text="(0/5 completed)"
+                android:textColor="@color/deep_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iv_test"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_download_complete"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_download_completed"
+                app:tint="@color/color_shamrock_green" />
+
+            <ImageView
+                android:id="@+id/iv_test"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_take_test"
+                app:tint="@color/color_shamrock_green" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="match_parent"
+                android:background="@color/color_light_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_download"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/ic_download"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@+id/view2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lyt_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@+id/view2">
+
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:indicatorSize="@dimen/_22sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:trackColor="@color/color_silver"
+                    app:trackThickness="5dp" />
+
+                <ImageView
+                    android:id="@+id/iv_retry"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:src="@drawable/retry"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lyt_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@+id/view2">
+
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/pb_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:indicatorSize="@dimen/_22sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:trackColor="@color/color_silver"
+                    app:trackThickness="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    style="@style/TextAppearance.Omang.textNewUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_content_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="10%" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/lyt_child"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:elevation="@dimen/_4sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_2sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lyt_header"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
+            <TextView
+                android:id="@+id/tv_heading"
+                style="@style/TextAppearance.Omang.TitleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Heading"
+                android:textAllCaps="true"
+                android:textColor="@color/card_txt_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.omang.app.utils.ExpandableTextView
+                android:id="@+id/tv_unit_name"
+                style="@style/TextAppearance.Omang.UnitTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/deep_blue"
+                app:collapseActionColor="@color/orange"
+                app:collapseActionText="show less"
+                app:expandActionColor="@color/orange"
+                app:expandActionText="show more"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_heading"
+                app:limitedMaxLines="1"
+                tools:text="@string/lorem_ipsum" />
+
+            <com.omang.app.utils.ExpandableTextView
+                android:id="@+id/tv_unit_description"
+                style="@style/TextAppearance.Omang.UnitTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_tech_support_title"
+                android:textFontWeight="400"
+                app:collapseActionColor="@color/orange"
+                app:collapseActionText="show less"
+                app:expandActionColor="@color/orange"
+                app:expandActionText="show more"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_unit_name"
+                app:limitedMaxLines="1"
+                tools:text="tools description" />
+
+            <com.omang.app.ui.myClassroom.fragments.subjectContent.lessons.NonScrollableRecyclerView
+                android:id="@+id/rv_lessons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintHeight_max="@dimen/_300sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_unit_description" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

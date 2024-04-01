@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    tools:context=".ui.home.activity.HomeActivity">
+
+    <TextView
+        android:id="@+id/txt_no_contents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:text="@string/release_date"
+        android:textColor="@color/color_greyish_brown"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/viewpager"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sync"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:visibility="gone"
+        app:cornerRadius="@dimen/_3sdp"
+        app:icon="@drawable/ic_sync_button"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/flTab"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_new_test"
+            style="@style/Omang.View.Rounded"
+            android:layout_width="@dimen/_73sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:padding="@dimen/_3sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text="@string/new_test"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_7sdp"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_attempted"
+            style="@style/Omang.View.Rounded"
+            android:layout_width="@dimen/_69sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/expired"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_7sdp"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_expired"
+            style="@style/Omang.View.Rounded"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/attempted"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_7sdp" />
+
+    </FrameLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flTab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ui.admin.fragment.AdminFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llUnpin"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_21sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/bg_button_with_radius"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/white_pin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:text="unpin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/llUnpin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical"
+                android:text="Logs" />
+
+        </ScrollView>
+
+        <!--        1-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_my_classroom"
+            android:layout_width="@dimen/_289sdp"
+            android:layout_height="@dimen/_187sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:alpha=".5"
+            android:clickable="false"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="33dp"
+            app:contentPadding="@dimen/margin_homecards_contentpadding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    style="@style/TextAppearance.Omang.UpdateTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:text="Components Disabled"
+                    android:textColor="@color/deep_blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--                1-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        style="@style/TextAppearance.Omang.BodySmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:text="Reset Device"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterial"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:checked="false"
+                        android:clickable="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/textView22"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbTint="@color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:background="@color/underline_grey_bg"
+                        android:padding="@dimen/_2sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/switchMaterial" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                2-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView211"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView21">
+
+                    <TextView
+                        android:id="@+id/textView221"
+                        style="@style/TextAppearance.Omang.BodySmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:text="Flash Reboot"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterial1"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:checked="false"
+                        android:clickable="false"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/textView221"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbTint="@color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:background="@color/underline_grey_bg"
+                        android:padding="@dimen/_2sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/switchMaterial1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                3-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView2113"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView211">
+
+                    <TextView
+                        android:id="@+id/textView2213"
+                        style="@style/TextAppearance.Omang.BodySmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:text="Status Bar"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterial13"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:checked="false"
+                        android:clickable="false"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/textView2213"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbTint="@color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:background="@color/underline_grey_bg"
+                        android:padding="@dimen/_2sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/switchMaterial13" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                4-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView21134"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2113">
+
+                    <TextView
+                        android:id="@+id/textView22134"
+                        style="@style/TextAppearance.Omang.BodySmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:text="Screen Assistance"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterial134"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:checked="false"
+                        android:clickable="false"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/textView22134"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbTint="@color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:background="@color/underline_grey_bg"
+                        android:padding="@dimen/_2sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/switchMaterial134" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--        2-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_my_classroom2"
+            android:layout_width="@dimen/_289sdp"
+            android:layout_height="@dimen/_145sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:alpha=".5"
+            android:clickable="false"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="6dp"
+            android:visibility="gone"
+            app:cardElevation="33dp"
+            app:contentPadding="@dimen/margin_homecards_contentpadding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_my_classroom">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView232"
+                    style="@style/TextAppearance.Omang.UpdateTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:text="Components Enabled"
+                    android:textColor="@color/deep_blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <!--                1-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView111"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView232">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        style="@style/TextAppearance.Omang.BodySmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:text="Wifi Module"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterial131"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:checked="false"
+                        android:clickable="false"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/textView1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbTint="@color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:background="@color/underline_grey_bg"
+                        android:padding="@dimen/_2sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/switchMaterial131" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                2-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView112"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView111">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        style="@style/TextAppearance.Omang.BodySmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:text="Mobile Data"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterial1312"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:checked="false"
+                        android:clickable="false"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/textView12"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbTint="@color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:background="@color/underline_grey_bg"
+                        android:padding="@dimen/_2sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/switchMaterial1312" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                3-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView1123"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView112">
+
+                    <TextView
+                        android:id="@+id/textView123"
+                        style="@style/TextAppearance.Omang.BodySmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:text="Bluetooth"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterial13123"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:checked="false"
+                        android:clickable="false"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/textView123"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:thumbTint="@color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:background="@color/underline_grey_bg"
+                        android:padding="@dimen/_2sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/switchMaterial13123" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--        3-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_my_classroom3"
+            android:layout_width="@dimen/_289sdp"
+            android:layout_height="@dimen/_145sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:alpha=".5"
+            android:clickable="false"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="6dp"
+            android:visibility="gone"
+            app:cardElevation="33dp"
+            app:contentPadding="@dimen/margin_homecards_contentpadding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_my_classroom2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView2323"
+                    style="@style/TextAppearance.Omang.UpdateTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:text="Restricted Apps"
+                    android:textColor="@color/deep_blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView1113"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2323">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        style="@style/TextAppearance.Omang.BodySmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginBottom="7dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toTopOf="@+id/textView1331"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView1331"
+                        style="@style/TextAppearance.Omang.BodySmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

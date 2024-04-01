@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_light_blue"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ui.techSupport.reportIssue.ReportIssue">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fab_support"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_12sdp"
+        app:cardBackgroundColor="@color/deep_blue"
+        app:cardCornerRadius="@dimen/_43sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:shapeAppearanceOverlay="@style/circleImageView">
+
+        <ImageView
+            android:id="@+id/iv_tech_support"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/report_issue_placeholder" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView34"
+        style="@style/TextAppearance.Omang.TitleSmallSecondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/email_address"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_7ssp"
+        app:layout_constraintEnd_toStartOf="@+id/textView36"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fab_support" />
+
+    <EditText
+        android:id="@+id/et_email"
+        style="@style/TextAppearance.Omang.BodyMedium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:hint="@string/please_enter_email"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/color_greyish_brown"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintEnd_toStartOf="@+id/et_phone"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <TextView
+        android:id="@+id/textView36"
+        style="@style/TextAppearance.Omang.TitleSmallSecondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cell_phone_number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_7ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView34"
+        app:layout_constraintTop_toTopOf="@+id/textView34" />
+
+
+    <EditText
+        android:id="@+id/et_phone"
+        style="@style/TextAppearance.Omang.BodyMedium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:hint="@string/cell_phone_number"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/color_greyish_brown"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_email"
+        app:layout_constraintTop_toTopOf="@+id/et_email" />
+
+    <TextView
+        android:id="@+id/textView35"
+        style="@style/TextAppearance.Omang.TitleSmallSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/upload_image"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_7ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+    <LinearLayout
+        android:id="@+id/ll_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView35">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit"
+            style="@style/Omang.Button.Rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/upload"
+            android:textAllCaps="false"
+            android:textColor="@color/text_grey_bg"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_7ssp"
+            app:cornerRadius="@dimen/_6sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyt_comments" />
+
+        <ImageView
+
+            android:id="@+id/iv_photo_preview"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:scaleType="fitXY"
+            android:scrollbars="horizontal"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:drawablePadding="@dimen/_80sdp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:scaleType="fitXY"
+            android:visibility="invisible"
+            android:src="@drawable/delete_white"
+            android:text="Click to Remove"
+            android:textSize="@dimen/_5ssp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView33"
+        style="@style/TextAppearance.Omang.TitleSmallSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/report_issue"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_7ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_image" />
+
+
+    <EditText
+        android:id="@+id/et_issue"
+        style="@style/TextAppearance.Omang.BodyMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/tech_support_description_hint"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine|textCapSentences"
+        android:minHeight="@dimen/_100sdp"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/color_greyish_brown"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tv_report_issue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="@string/report_issue_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_issue" />
+
+    <ImageView
+        android:id="@+id/iv_chat_bubble"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginStart="@dimen/_70sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/chat_bubble"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        style="@style/TextAppearance.Omang.TitleSmallSecondary"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:maxLength="17"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_chat_bubble"
+        app:layout_constraintStart_toStartOf="@+id/iv_chat_bubble"
+        app:layout_constraintTop_toTopOf="@+id/iv_chat_bubble"
+        tools:text="Hi Nkululeko!" />
+
+    <TextView
+        android:id="@+id/tv_how_to_help"
+        style="@style/TextAppearance.Omang.TitleSmallSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tech_help_dialog"
+        android:textColor="@color/grey_tech_support_title"
+        android:textSize="@dimen/_7ssp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_welcome"
+        app:layout_constraintStart_toStartOf="@+id/tv_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+        tools:layout_editor_absoluteX="381dp"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

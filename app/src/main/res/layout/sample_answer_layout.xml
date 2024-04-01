@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="@dimen/_2sdp"
+    app:cardUseCompatPadding="true"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:tintMode="screen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_question" />
+
+        <LinearLayout
+            android:id="@+id/lyt_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5">
+
+            <TextView
+                android:id="@+id/txt_question"
+                style="@style/TextAppearance.Omang.BodyMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:textColor="@color/text_content_color"
+                android:textSize="@dimen/_8ssp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:text="Sdajsdh" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_question"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/dummy"
+                android:visibility="gone"
+                android:scaleType="fitXY"
+                android:hardwareAccelerated="false"
+                app:shapeAppearanceOverlay="@style/circleImageViewBorder5" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_choose_label"
+            style="@style/TextAppearance.Omang.BodySmallInter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/choose_one_option_from_below"
+            android:textColor="@color/text_grey_bg"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintEnd_toEndOf="@+id/lyt_question"
+            app:layout_constraintStart_toStartOf="@+id/lyt_question"
+            app:layout_constraintTop_toBottomOf="@+id/lyt_question" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_test"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fadeScrollbars="false"
+            android:paddingBottom="@dimen/_10sdp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/lyt_question"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/txt_choose_label" />
+
+        <EditText
+            android:id="@+id/ed_answer"
+            style="@style/TextAppearance.Omang.BodyMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/your_answer"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/rv_test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_test" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

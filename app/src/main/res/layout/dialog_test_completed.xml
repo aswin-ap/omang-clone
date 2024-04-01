@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_280sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:elevation="@dimen/_10sdp"
+    android:background="@android:color/transparent"
+    app:cardCornerRadius="@dimen/_25sdp">-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_dialog_round"
+    android:layout_width="@dimen/_280sdp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/txt_description"
+        style="@style/TextAppearance.Omang.BodySmallInter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_title"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/are_you_sure_you_want_to_continue" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/Omang.Button.Rounded"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_description"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:backgroundTint="@color/color_shamrock_green"
+        android:text="@string/confirm"
+        android:layout_toEndOf="@id/btn_cancel"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/_8ssp" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        style="@style/Omang.Button.Rounded"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_description"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:backgroundTint="@color/text_grey_bg"
+        android:text="@string/cancel"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:textAlignment="center"
+        android:textSize="@dimen/_8ssp" />
+
+
+    <TextView
+        android:id="@+id/txt_title"
+        style="@style/TextAppearance.Omang.TitleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:text="@string/you_almost_done"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/color_shamrock_green" />
+</RelativeLayout>
+<!--</androidx.cardview.widget.CardView>-->

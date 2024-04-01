@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.omang.app.one.android13",
+  "variantName": "android13ReleaseProd",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1029,
+      "versionName": "1.1.29",
+      "outputFile": "app-android13-releaseProd.apk"
+    }
+  ],
+  "elementType": "File"
+}

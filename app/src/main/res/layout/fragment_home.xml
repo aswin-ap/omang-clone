@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_my_classroom"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_homecards_height"
+        android:layout_marginStart="@dimen/margin_homecards_start"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/margin_homecards_end"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/margin_homecards_cornerradius"
+        app:cardElevation="@dimen/margin_homecards_elevation"
+        app:cardMaxElevation="@dimen/margin_homecards_maxelevation"
+        app:contentPadding="@dimen/margin_homecards_contentpadding"
+        app:layout_constraintBottom_toTopOf="@+id/cv_my_library"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/cv_explore"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_classroom_bubble"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/ic_bell_update"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_my_classroom"
+                android:layout_width="@dimen/margin_homecards_inner_icon_size_1"
+                android:layout_height="@dimen/margin_homecards_inner_icon_size_1"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_my_classroom"
+                app:layout_constraintBottom_toTopOf="@+id/tv_my_classroom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_my_classroom"
+                style="@style/TextAppearance.Omang.TitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/my_classroom_title"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_my_classroom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/iv_my_classroom"
+                app:layout_constraintTop_toBottomOf="@+id/iv_my_classroom" />
+
+            <TextView
+                android:id="@+id/tv_classroom_last_updated"
+                style="@style/TextAppearance.Omang.TitleSmallSecondaryInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_5ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_explore"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_homecards_height"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/margin_homecards_start"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/margin_homecards_cornerradius"
+        app:cardElevation="@dimen/margin_homecards_elevation"
+        app:cardMaxElevation="@dimen/margin_homecards_maxelevation"
+        app:contentPadding="@dimen/margin_homecards_contentpadding"
+        app:layout_constraintBottom_toTopOf="@+id/cv_my_web_platforms"
+        app:layout_constraintLeft_toRightOf="@+id/cv_my_classroom"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/iv_explore_bubble"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/ic_bell_update"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tv_explore_last_updated"
+                style="@style/TextAppearance.Omang.TitleSmallSecondaryInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last updated :\n16 May 2023"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_explore"
+                android:layout_width="@dimen/margin_homecards_inner_icon_size_2"
+                android:layout_height="@dimen/margin_homecards_inner_icon_size_2"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_explore"
+                app:layout_constraintBottom_toTopOf="@+id/tv_explore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_explore"
+                style="@style/TextAppearance.Omang.TitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:text="@string/explore"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_explore"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/iv_explore"
+                app:layout_constraintTop_toBottomOf="@+id/iv_explore" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_my_library"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_homecards_height"
+        android:layout_marginStart="@dimen/margin_homecards_start"
+        android:layout_marginTop="@dimen/margin_homecards_top"
+        android:layout_marginEnd="@dimen/margin_homecards_end"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/margin_homecards_cornerradius"
+        app:cardElevation="@dimen/margin_homecards_elevation"
+        app:cardMaxElevation="@dimen/margin_homecards_maxelevation"
+        app:contentPadding="@dimen/margin_homecards_contentpadding"
+        app:layout_constraintBottom_toTopOf="@+id/cv_doe"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/cv_my_web_platforms"
+        app:layout_constraintTop_toBottomOf="@+id/cv_my_classroom">
+
+
+        <ImageView
+            android:id="@+id/iv_my_library_bubble"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/ic_bell_update"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_my_library_last_updated"
+                style="@style/TextAppearance.Omang.TitleSmallSecondaryInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last updated :\n16 May 2023"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_my_library"
+                android:layout_width="@dimen/margin_homecards_inner_icon_size_3"
+                android:layout_height="@dimen/margin_homecards_inner_icon_size_3"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_my_library"
+                app:layout_constraintBottom_toTopOf="@+id/tv_my_library"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_my_library"
+                style="@style/TextAppearance.Omang.TitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/my_library"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_my_library"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/iv_my_library"
+                app:layout_constraintTop_toBottomOf="@+id/iv_my_library" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_my_web_platforms"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_homecards_height"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/margin_homecards_start"
+        android:layout_marginEnd="@dimen/margin_homecards_start"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/margin_homecards_cornerradius"
+        app:cardElevation="@dimen/margin_homecards_elevation"
+        app:cardMaxElevation="@dimen/margin_homecards_maxelevation"
+        app:contentPadding="@dimen/margin_homecards_contentpadding"
+        app:layout_constraintBottom_toTopOf="@+id/cv_myGallery"
+        app:layout_constraintLeft_toRightOf="@+id/cv_my_library"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_explore">
+
+        <ImageView
+            android:id="@+id/iv_my_web_platform_bubble"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/ic_bell_update"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_my_web_platforms"
+                style="@style/TextAppearance.Omang.TitleSmallSecondaryInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last updated :\n16 May 2023"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_my_web_platforms"
+                android:layout_width="@dimen/margin_homecards_inner_icon_size_3"
+                android:layout_height="@dimen/margin_homecards_inner_icon_size_3"
+                android:src="@drawable/bonus_website"
+                app:layout_constraintBottom_toTopOf="@+id/txt_bonus_website"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txt_bonus_website"
+                style="@style/TextAppearance.Omang.TitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/my_web_platforms"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/iv_my_web_platforms"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/iv_my_web_platforms"
+                app:layout_constraintTop_toBottomOf="@+id/iv_my_web_platforms" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/dot_status_cv_bonuswebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/bg_dot_blue"
+            android:visibility="gone" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_doe"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_homecards_height"
+        android:layout_marginStart="@dimen/margin_homecards_start"
+        android:layout_marginTop="@dimen/margin_homecards_top"
+        android:layout_marginEnd="@dimen/margin_homecards_end"
+        android:layout_marginBottom="@dimen/margin_homecards_top"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/margin_homecards_cornerradius"
+        app:cardElevation="@dimen/margin_homecards_elevation"
+        app:cardMaxElevation="@dimen/margin_homecards_maxelevation"
+        app:contentPadding="@dimen/margin_homecards_contentpadding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/cv_myGallery"
+        app:layout_constraintTop_toBottomOf="@+id/cv_my_library">
+
+        <ImageView
+            android:id="@+id/dot_status_doe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/bg_dot_blue"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imv_doe"
+                android:layout_width="@dimen/margin_homecards_inner_icon_size_5"
+                android:layout_height="@dimen/margin_homecards_inner_icon_size_5"
+                android:src="@drawable/ic_doe"
+                app:layout_constraintBottom_toTopOf="@+id/txt_my_doe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txt_my_doe"
+                style="@style/TextAppearance.Omang.TitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/dept_education"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="marquee"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imv_doe"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/imv_doe"
+                app:layout_constraintTop_toBottomOf="@+id/imv_doe" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_myGallery"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_homecards_height"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/margin_homecards_start"
+        android:layout_marginEnd="@dimen/margin_homecards_start"
+        android:layout_marginBottom="@dimen/margin_homecards_top"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/margin_homecards_cornerradius"
+        app:cardElevation="@dimen/margin_homecards_elevation"
+        app:cardMaxElevation="@dimen/margin_homecards_maxelevation"
+        app:contentPadding="@dimen/margin_homecards_contentpadding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/cv_doe"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_my_web_platforms">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imv_myGallery"
+                android:layout_width="@dimen/margin_homecards_inner_icon_size_6"
+                android:layout_height="@dimen/margin_homecards_inner_icon_size_6"
+                android:src="@drawable/ic_gallery"
+                app:layout_constraintBottom_toTopOf="@+id/txt_myGallery"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txt_myGallery"
+                style="@style/TextAppearance.Omang.TitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/my_gallery"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imv_myGallery"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/imv_myGallery"
+                app:layout_constraintTop_toBottomOf="@+id/imv_myGallery" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--    <ImageButton
+            android:id="@+id/report_issue"
+            android:layout_width="@dimen/margin_report_issue_icon_size"
+            android:layout_height="@dimen/margin_report_issue_icon_size"
+            android:layout_marginEnd="@dimen/margin_report_issue_marginend"
+            android:layout_marginBottom="@dimen/margin_report_issue_margin_bottom"
+            android:background="@drawable/bg_report_issue"
+            android:backgroundTint="#FFF"
+            android:elevation="@dimen/margin_report_issue_elevation"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/report_issue_placeholder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

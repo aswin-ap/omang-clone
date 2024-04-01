@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/callLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    android:padding="@dimen/_4sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_weight="1"
+        android:background="@drawable/ic_call_card">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:padding="2dp"
+            android:hardwareAccelerated="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Omang.Image.Rounded.Call"
+            app:srcCompat="@drawable/tech_ammachi_passport_size"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_profile"
+            app:layout_constraintTop_toTopOf="@+id/iv_profile">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPrimary"
+                style="@style/TextAppearance.Omang.TitleSmallSecondaryInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:maxLines="1"
+                android:text="@string/incoming_call"
+                android:textColor="@color/incoming_call_tv"
+                android:textFontWeight="500" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSecondary"
+                style="@style/TextAppearance.Omang.TitleSmallSecondaryInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:maxLines="1"
+                android:text="Aunty A"
+                android:textColor="@color/black"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_14ssp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDuration"
+            style="@style/TextAppearance.Omang.TitleSmallSecondaryInter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:ellipsize="marquee"
+            android:maxWidth="@dimen/_70sdp"
+            android:maxLines="1"
+            android:text="00:00"
+            android:textColor="@color/call_duration"
+            android:textFontWeight="200"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivBt"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/ic_call_pickup"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>
+

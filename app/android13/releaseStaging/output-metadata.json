@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.omang.app.one.android13",
+  "variantName": "android13ReleaseStaging",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1170,
+      "versionName": "1.0.170-release-staging",
+      "outputFile": "app-android13-releaseStaging.apk"
+    }
+  ],
+  "elementType": "File"
+}

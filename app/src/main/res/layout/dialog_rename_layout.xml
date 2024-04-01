@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_300"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:elevation="@dimen/padding_small"
+    android:padding="@dimen/dp_20">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_stroke_rename"
+        android:padding="@dimen/padding_small">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Rename File"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etRename"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@drawable/edittext_background"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp" />
+
+            <Button
+                android:id="@+id/btSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/dp_20"
+                android:backgroundTint="@color/color_peacock_blue"
+                android:maxLines="1"
+                android:text="OK" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

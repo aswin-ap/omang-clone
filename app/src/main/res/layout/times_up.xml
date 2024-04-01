@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fafafa">
+
+    <ImageView
+        android:id="@+id/iv_emoji"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/tv_ssid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/times_up">
+
+
+    </ImageView>
+
+
+    <TextView
+        android:id="@+id/tv_ssid"
+        style="@style/TextAppearance.Omang.TitleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_1sdp"
+        android:text="@string/test_time_completed" />
+
+
+    <TextView
+        android:id="@+id/tv_description"
+        style="@style/TextAppearance.Omang.BodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_emoji"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_1sdp"
+        android:text="@string/test_submit_request" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        style="@style/Omang.Button.Rounded"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_1sdp"
+        android:text="@string/submit" />
+
+</RelativeLayout>

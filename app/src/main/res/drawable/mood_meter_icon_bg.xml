@@ -1,0 +1,17 @@
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background shape -->
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="12dp" />
+            <stroke
+                android:width=".7dp"
+                android:color="#AADDF7"
+                android:dashGap="3dp"
+                android:dashWidth="3dp"/>
+        </shape>
+    </item>
+
+</layer-list>

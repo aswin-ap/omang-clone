@@ -1,0 +1,1611 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 5,
+    "identityHash": "2d58e91e693b83e61aa25549343ec6ec",
+    "entities": [
+      {
+        "tableName": "user_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `firstName` TEXT, `lastName` TEXT, `phone` TEXT, `dropPoints` INTEGER, `dob` TEXT, `registeredAt` TEXT, `avatar` TEXT, `accessionNumber` TEXT, `email` TEXT, `school_address` TEXT, `school_phone` TEXT, `school_name` TEXT, `school_id` INTEGER, `school_email` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstName",
+            "columnName": "firstName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastName",
+            "columnName": "lastName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "phone",
+            "columnName": "phone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dropPoints",
+            "columnName": "dropPoints",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dob",
+            "columnName": "dob",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "registeredAt",
+            "columnName": "registeredAt",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "avatar",
+            "columnName": "avatar",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "accessionNumber",
+            "columnName": "accessionNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "school.school_address",
+            "columnName": "school_address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "school.school_phone",
+            "columnName": "school_phone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "school.school_name",
+            "columnName": "school_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "school.school_id",
+            "columnName": "school_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "school.school_email",
+            "columnName": "school_email",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "my_web_platform_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`website_id` INTEGER NOT NULL, `name` TEXT NOT NULL, `logo` TEXT NOT NULL, `url` TEXT, `altUrl` TEXT, `timeStamp` TEXT, `isFav` INTEGER NOT NULL, `type` INTEGER, PRIMARY KEY(`website_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "website_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "logo",
+            "columnName": "logo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "altUrl",
+            "columnName": "altUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "timeStamp",
+            "columnName": "timeStamp",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isFav",
+            "columnName": "isFav",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "website_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "my_classroom_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`classroom_id` INTEGER NOT NULL, `name` TEXT NOT NULL, `logo` TEXT NOT NULL, `type` TEXT NOT NULL, `updatedAt` TEXT, `progress` INTEGER NOT NULL, `classroom_content_count_id` INTEGER NOT NULL, `classroom_content_count_books` INTEGER NOT NULL, `classroom_content_count_videos` INTEGER NOT NULL, `classroom_content_count_mcqs` INTEGER NOT NULL, `classroom_content_count_lessons` INTEGER NOT NULL, `classroom_content_count_webPlatforms` INTEGER NOT NULL, PRIMARY KEY(`classroom_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "classroom_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "logo",
+            "columnName": "logo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "progress",
+            "columnName": "progress",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contents.id",
+            "columnName": "classroom_content_count_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contents.books",
+            "columnName": "classroom_content_count_books",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contents.videos",
+            "columnName": "classroom_content_count_videos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contents.mcqs",
+            "columnName": "classroom_content_count_mcqs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contents.lessons",
+            "columnName": "classroom_content_count_lessons",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contents.webPlatforms",
+            "columnName": "classroom_content_count_webPlatforms",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "classroom_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ContentCountEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `books` INTEGER NOT NULL, `videos` INTEGER NOT NULL, `mcqs` INTEGER NOT NULL, `lessons` INTEGER NOT NULL, `webPlatforms` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "books",
+            "columnName": "books",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "videos",
+            "columnName": "videos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mcqs",
+            "columnName": "mcqs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lessons",
+            "columnName": "lessons",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "webPlatforms",
+            "columnName": "webPlatforms",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "resources_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`resource_id` INTEGER NOT NULL, `name` TEXT NOT NULL, `logo` TEXT NOT NULL, `description` TEXT, `file` TEXT, `type` TEXT, `isBonus` INTEGER NOT NULL, PRIMARY KEY(`resource_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "resource_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "logo",
+            "columnName": "logo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "file",
+            "columnName": "file",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isBonus",
+            "columnName": "isBonus",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "resource_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "unit_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`unit_id` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `objective` TEXT NOT NULL, PRIMARY KEY(`unit_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "unit_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "objective",
+            "columnName": "objective",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "unit_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "lesson_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`lesson_id` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `logo` TEXT NOT NULL, `file` TEXT NOT NULL, `mimeType` TEXT NOT NULL, `createdByname` TEXT NOT NULL, `createdByavatar` TEXT NOT NULL, PRIMARY KEY(`lesson_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "lesson_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "logo",
+            "columnName": "logo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "file",
+            "columnName": "file",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mimeType",
+            "columnName": "mimeType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdBy.name",
+            "columnName": "createdByname",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdBy.avatar",
+            "columnName": "createdByavatar",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "lesson_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "relation_classroom_resource",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`classroom_id` INTEGER NOT NULL, `resource_id` INTEGER NOT NULL, PRIMARY KEY(`classroom_id`, `resource_id`), FOREIGN KEY(`classroom_id`) REFERENCES `my_classroom_table`(`classroom_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`resource_id`) REFERENCES `resources_table`(`resource_id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "classroomId",
+            "columnName": "classroom_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "resourceId",
+            "columnName": "resource_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "classroom_id",
+            "resource_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_relation_classroom_resource_resource_id",
+            "unique": false,
+            "columnNames": [
+              "resource_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_relation_classroom_resource_resource_id` ON `${TABLE_NAME}` (`resource_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "my_classroom_table",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "classroom_id"
+            ],
+            "referencedColumns": [
+              "classroom_id"
+            ]
+          },
+          {
+            "table": "resources_table",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "resource_id"
+            ],
+            "referencedColumns": [
+              "resource_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "relation_unit_lesson",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`classroom_id` INTEGER NOT NULL, `unit_id` INTEGER NOT NULL, `lesson_id` INTEGER NOT NULL, PRIMARY KEY(`classroom_id`, `unit_id`, `lesson_id`), FOREIGN KEY(`classroom_id`) REFERENCES `my_classroom_table`(`classroom_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`unit_id`) REFERENCES `unit_table`(`unit_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`lesson_id`) REFERENCES `lesson_table`(`lesson_id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "classroomId",
+            "columnName": "classroom_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitId",
+            "columnName": "unit_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lessonId",
+            "columnName": "lesson_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "classroom_id",
+            "unit_id",
+            "lesson_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "my_classroom_table",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "classroom_id"
+            ],
+            "referencedColumns": [
+              "classroom_id"
+            ]
+          },
+          {
+            "table": "unit_table",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "unit_id"
+            ],
+            "referencedColumns": [
+              "unit_id"
+            ]
+          },
+          {
+            "table": "lesson_table",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "lesson_id"
+            ],
+            "referencedColumns": [
+              "lesson_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "relation_classroom_lesson",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`classroom_id` INTEGER NOT NULL, `lesson_id` INTEGER NOT NULL, PRIMARY KEY(`classroom_id`, `lesson_id`), FOREIGN KEY(`classroom_id`) REFERENCES `my_classroom_table`(`classroom_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`lesson_id`) REFERENCES `lesson_table`(`lesson_id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "classroomId",
+            "columnName": "classroom_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lessonId",
+            "columnName": "lesson_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "classroom_id",
+            "lesson_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "my_classroom_table",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "classroom_id"
+            ],
+            "referencedColumns": [
+              "classroom_id"
+            ]
+          },
+          {
+            "table": "lesson_table",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "lesson_id"
+            ],
+            "referencedColumns": [
+              "lesson_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "relation_classroom_website",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`classroom_id` INTEGER NOT NULL, `website_id` INTEGER NOT NULL, PRIMARY KEY(`classroom_id`, `website_id`), FOREIGN KEY(`classroom_id`) REFERENCES `my_classroom_table`(`classroom_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`website_id`) REFERENCES `my_web_platform_table`(`website_id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "classroomId",
+            "columnName": "classroom_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "websiteId",
+            "columnName": "website_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "classroom_id",
+            "website_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_relation_classroom_website_website_id",
+            "unique": false,
+            "columnNames": [
+              "website_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_relation_classroom_website_website_id` ON `${TABLE_NAME}` (`website_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "my_classroom_table",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "classroom_id"
+            ],
+            "referencedColumns": [
+              "classroom_id"
+            ]
+          },
+          {
+            "table": "my_web_platform_table",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "website_id"
+            ],
+            "referencedColumns": [
+              "website_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "relation_lesson_weblinks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`classroomId` INTEGER NOT NULL, `lessonId` INTEGER NOT NULL, `websiteIds` TEXT NOT NULL, PRIMARY KEY(`classroomId`, `lessonId`))",
+        "fields": [
+          {
+            "fieldPath": "classroomId",
+            "columnName": "classroomId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lessonId",
+            "columnName": "lessonId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "websiteIds",
+            "columnName": "websiteIds",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "classroomId",
+            "lessonId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "test_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `generalMcqId` INTEGER, `classroomId` INTEGER, `unitId` INTEGER, `startTime` TEXT NOT NULL, `endTime` TEXT NOT NULL, `createdOn` TEXT NOT NULL, `name` TEXT NOT NULL, `instructions` TEXT NOT NULL, `mcq_type` INTEGER NOT NULL, `type` INTEGER, `question_id` TEXT NOT NULL, `score` REAL NOT NULL, `percentage` REAL NOT NULL, `attemptsCount` INTEGER NOT NULL, `correctAttempts` INTEGER NOT NULL, `wrongAttempts` INTEGER NOT NULL, `isSentToApi` INTEGER NOT NULL, `questions` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "generalMcqId",
+            "columnName": "generalMcqId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "classroomId",
+            "columnName": "classroomId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "unitId",
+            "columnName": "unitId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "startTime",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "endTime",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdOn",
+            "columnName": "createdOn",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "instructions",
+            "columnName": "instructions",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mcqType",
+            "columnName": "mcq_type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "questionsId",
+            "columnName": "question_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "score",
+            "columnName": "score",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentage",
+            "columnName": "percentage",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attemptsCount",
+            "columnName": "attemptsCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correctAttempts",
+            "columnName": "correctAttempts",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wrongAttempts",
+            "columnName": "wrongAttempts",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isSentToApi",
+            "columnName": "isSentToApi",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questions",
+            "columnName": "questions",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "relation_unit_test",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`classroom_id` INTEGER NOT NULL, `unit_id` INTEGER NOT NULL, `test_id` INTEGER NOT NULL, `isAttempted` INTEGER NOT NULL, `testStatus` INTEGER NOT NULL, PRIMARY KEY(`unit_id`, `test_id`, `classroom_id`))",
+        "fields": [
+          {
+            "fieldPath": "classroomId",
+            "columnName": "classroom_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unitId",
+            "columnName": "unit_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "testId",
+            "columnName": "test_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isAttempted",
+            "columnName": "isAttempted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "testStatus",
+            "columnName": "testStatus",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "unit_id",
+            "test_id",
+            "classroom_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "tickets_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ticket_id` TEXT NOT NULL, `roomId` INTEGER NOT NULL, `issue` TEXT NOT NULL, `downloadSpeed` TEXT, `isClosed` INTEGER NOT NULL, `phone` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `reopenedAt` TEXT, `message` TEXT, `closedAt` TEXT, `email` TEXT NOT NULL, `offline` INTEGER NOT NULL, `ticketImage` TEXT NOT NULL, `unreadMessages` INTEGER NOT NULL, `rating` INTEGER, `feedback` TEXT, `navigation` TEXT, PRIMARY KEY(`ticket_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ticket_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roomId",
+            "columnName": "roomId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "issue",
+            "columnName": "issue",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "downloadSpeed",
+            "columnName": "downloadSpeed",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isClosed",
+            "columnName": "isClosed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phone",
+            "columnName": "phone",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reopenedAt",
+            "columnName": "reopenedAt",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "message",
+            "columnName": "message",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "closedAt",
+            "columnName": "closedAt",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isOffline",
+            "columnName": "offline",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ticketImage",
+            "columnName": "ticketImage",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unreadMessages",
+            "columnName": "unreadMessages",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "rating",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "feedback",
+            "columnName": "feedback",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "navigation",
+            "columnName": "navigation",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "ticket_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "public_feed_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`feed_id` TEXT NOT NULL, `resourceId` INTEGER NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `image` TEXT, `createdAt` TEXT, `postedTo` TEXT, `feedType` INTEGER, `createdByfirstName` TEXT, `createdBylastName` TEXT, `createdByavatar` TEXT, `classroomDetailsclassRoomOrClub` TEXT, `classroomDetailsclassRoomId` INTEGER, PRIMARY KEY(`feed_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "feed_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "resourceId",
+            "columnName": "resourceId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "image",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "postedTo",
+            "columnName": "postedTo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "feedType",
+            "columnName": "feedType",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdBy.firstName",
+            "columnName": "createdByfirstName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdBy.lastName",
+            "columnName": "createdBylastName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdBy.avatar",
+            "columnName": "createdByavatar",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "classroomDetails.classRoomOrClub",
+            "columnName": "classroomDetailsclassRoomOrClub",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "classroomDetails.classRoomId",
+            "columnName": "classroomDetailsclassRoomId",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "feed_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "questions_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `question` TEXT NOT NULL, `score` INTEGER NOT NULL, `questionType` INTEGER NOT NULL, `questionUrl` TEXT, `options` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "question",
+            "columnName": "question",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "score",
+            "columnName": "score",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionType",
+            "columnName": "questionType",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionUrl",
+            "columnName": "questionUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "options",
+            "columnName": "options",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "mobile_navigation_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `page` TEXT NOT NULL, `subject_id` INTEGER, `content_id` INTEGER, `event` INTEGER NOT NULL, `comment` TEXT, `createdTime` INTEGER NOT NULL, `app_version` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "page",
+            "columnName": "page",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subjectId",
+            "columnName": "subject_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "contentId",
+            "columnName": "content_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "event",
+            "columnName": "event",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "comment",
+            "columnName": "comment",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdTime",
+            "columnName": "createdTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "appVersion",
+            "columnName": "app_version",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "app_location",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `lat` TEXT NOT NULL, `long` TEXT NOT NULL, `time` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lat",
+            "columnName": "lat",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lon",
+            "columnName": "long",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "time",
+            "columnName": "time",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "mode_meter_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `emoji` TEXT, `displayName` TEXT, `systemName` TEXT, `colour` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "emoji",
+            "columnName": "emoji",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "displayName",
+            "columnName": "displayName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "systemName",
+            "columnName": "systemName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "colour",
+            "columnName": "colour",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "mode_data_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`columnId` TEXT NOT NULL, `id` INTEGER, `time` TEXT, `displayName` TEXT, PRIMARY KEY(`columnId`))",
+        "fields": [
+          {
+            "fieldPath": "columnId",
+            "columnName": "columnId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "time",
+            "columnName": "time",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "displayName",
+            "columnName": "displayName",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "columnId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "psm_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`psmId` INTEGER NOT NULL, `psmResponse` TEXT NOT NULL, PRIMARY KEY(`psmId`))",
+        "fields": [
+          {
+            "fieldPath": "psmId",
+            "columnName": "psmId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "psmResponse",
+            "columnName": "psmResponse",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "psmId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "analytics_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` INTEGER, `created_time` INTEGER, `start_time` TEXT, `end_time` TEXT, `resource_id` INTEGER, `webPlatform_id` INTEGER, `web_url` TEXT, `classroom_id` INTEGER, `lesson_id` INTEGER, `unit_id` INTEGER, `menu` INTEGER, `latitude` REAL, `longitude` REAL, `logs` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdTime",
+            "columnName": "created_time",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "start_time",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "end_time",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "resourceId",
+            "columnName": "resource_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "webPlatformId",
+            "columnName": "webPlatform_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "webUrl",
+            "columnName": "web_url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "classroomId",
+            "columnName": "classroom_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lessonId",
+            "columnName": "lesson_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "unitId",
+            "columnName": "unit_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "menu",
+            "columnName": "menu",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "logs",
+            "columnName": "logs",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "classroom_feed_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`feed_id` TEXT NOT NULL, `resourceId` INTEGER NOT NULL, `classroom_id` INTEGER NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `image` TEXT, `createdAt` TEXT, `postedTo` TEXT, `createdByfirstName` TEXT, `createdBylastName` TEXT, `createdByavatar` TEXT, `classroomDetailsclassRoomOrClub` TEXT, `classroomDetailsclassRoomId` INTEGER, PRIMARY KEY(`feed_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "feed_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "resourceId",
+            "columnName": "resourceId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "classroomId",
+            "columnName": "classroom_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "image",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "postedTo",
+            "columnName": "postedTo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdBy.firstName",
+            "columnName": "createdByfirstName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdBy.lastName",
+            "columnName": "createdBylastName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdBy.avatar",
+            "columnName": "createdByavatar",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "classroomDetails.classRoomOrClub",
+            "columnName": "classroomDetailsclassRoomOrClub",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "classroomDetails.classRoomId",
+            "columnName": "classroomDetailsclassRoomId",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "feed_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "file_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`file_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `file_path` TEXT NOT NULL, `created_time` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "fileId",
+            "columnName": "file_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "filePath",
+            "columnName": "file_path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdTime",
+            "columnName": "created_time",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "file_id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2d58e91e693b83e61aa25549343ec6ec')"
+    ]
+  }
+}

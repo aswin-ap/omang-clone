@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_white2">#CCCCCC</color>
+    <color name="deep_blue">#0E73A7</color>#82CAFF
+    <color name="yellow">#FFEB3B</color>#82CAFF
+    <color name="orange">#FF5722</color>#82CAFF
+    <color name="light_blue">#82CAFF</color>
+    <color name="color_light_blue">#AFDEF3</color>
+    <color name="white_faded">#d4d4d4</color>
+    <color name="white_faded_two">#e4e4e4</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_shamrock_green">#00b13e</color>
+    <color name="color_grey">#414141</color>
+    <color name="imageview_tint">#E4E4E4</color>
+    <color name="color_peacock_blue">#0368AC</color>
+    <color name="color_deep_blue">#005288</color>
+    <color name="color_greyish_brown">#414141</color>
+    <color name="color_silver">#d6dee2</color>
+    <color name="color_shamrock_green_fill">#008037</color>
+    <color name="color_shamrock_green_unfill">#CAF3CA</color>
+    <color name="color_tomato_red">#f1433e</color>
+    <color name="dialog_grey_bg">#60000000</color>
+    <color name="text_grey_bg">#5C5C5C</color>
+    <color name="underline_grey_bg">#DCDCDC</color>
+    <color name="delete_red">#EE3333</color>
+    <color name="warm_grey">#727272</color>
+
+
+    <!-- use common color for text in app-->
+    <color name="text_heading_color">#1F1F1F</color>
+    <color name="text_content_color">#414141</color>
+    <color name="text_error_color">#f1433e</color>
+    <color name="text_success_color">#00b13e</color>
+    <color name="color_disabled">#858585</color>
+
+    <color name="divider_color">#d6dee2</color>
+    <color name="color_blue">#007FFF</color>
+    <color name="grey_bg">#f1f1f1</color>
+    <color name="shimmer_placeholder">#dddddd</color>
+    <!-- colors for progress in the app-->
+    <color name="progress_zero">#ff3131</color>
+    <color name="progress_zero_secondary">#ff5757</color>
+    <color name="progress_ten">#ff5c00</color>
+    <color name="progress_ten_secondary">#ff914d</color>
+    <color name="progress_twenty">#ff914d</color>
+    <color name="progress_twenty_secondary">#ffbd59</color>
+    <color name="progress_thirty">#facb01</color>
+    <color name="progress_thirty_secondary">#f2da66</color>
+    <color name="progress_forty">#ff5757</color>
+    <color name="progress_forty_secondary">#ffa2a2</color>
+    <color name="progress_fifty">#cb6ce6</color>
+    <color name="progress_fifty_secondary">#e6adf6</color>
+    <color name="progress_sixty">#8c5bea</color>
+    <color name="progress_sixty_secondary">#ba9df2</color>
+    <color name="progress_seventy">#0e73a7</color>
+    <color name="progress_seventy_secondary">#26a9e0</color>
+    <color name="progress_eighty">#26a9e0</color>
+    <color name="progress_eighty_secondary">#a4d2e7</color>
+    <color name="progress_ninety">#05938f</color>
+    <color name="progress_ninety_secondary">#88c8c7</color>
+    <color name="progress_hundred">#00bf15</color>
+
+    <color name="bottom_nav">#0074A7</color>
+
+    <color name="pill_txt_color">#FFFFFF</color>
+    <color name="pill_bg">#0E73A7</color>
+    <color name="card_grey_bg">#F4F4F4</color>
+
+    <color name="card_txt_primary">#737373</color>
+    <color name="title_grey">#5D5D5D</color>
+    <color name="card_txt_secondary">#737373</color>
+    <color name="grey_tech_support_title">#717171</color>
+
+    <color name="card_txt_new_update">#0E73A7</color>
+
+    <color name="bt_selector_true">#0E73A7</color>
+    <color name="bt_selector_false">#82CAFF</color>
+
+
+    <color name="socket_connecting">#FFEB3B</color>
+    <color name="socket_connected">#3AE834</color>
+    <color name="socket_disconnected">#A40707</color>
+    <color name="socket_error">#FF0000</color>
+
+    <color name="bt_emoji_non_selected">#f1433e</color>
+    <color name="bt_emoji_selected">#4B0806</color>
+
+    <color name="mode_meter_blue">#005289</color>
+
+
+    <color name="call_bg">#E5EFF4</color>
+    <color name="incoming_call_tv">#868486</color>
+    <color name="call_duration">#286E34</color>
+    <color name="call_ended">#BB2B2E</color>
+    <color name="sync_background">#D4E4EC</color>
+
+    <color name="test_blue">#A2D0E5</color>
+
+
+
+
+</resources>

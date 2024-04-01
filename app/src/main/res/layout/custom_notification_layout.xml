@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_20sdp"
+    android:background="@color/white_faded"
+    android:gravity="center"
+    android:padding="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="@color/bottom_nav"
+    app:strokeWidth="@dimen/_1sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_2sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:background="@drawable/home_logo"
+                android:padding="1dp"
+                android:visibility="visible"
+                android:hardwareAccelerated="false"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                app:strokeColor="@color/text_grey_bg"
+                app:strokeWidth=".5dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_user"
+                    style="@style/TextAppearance.Omang.BodySmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:includeFontPadding="false"
+                    android:text="Jendamark"
+                    android:textColor="#525252"
+                    android:visibility="visible"
+                    tools:layout_editor_absoluteX="50dp" />
+
+                <TextView
+                    android:id="@+id/tv_post_details"
+                    style="@style/TextAppearance.Omang.TitleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:textColor="@color/grey_tech_support_title"
+                    android:textSize="@dimen/_7ssp"
+                    android:visibility="gone"
+                    tools:text="Posted to : Teacher    |    Classroom : History" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/bt_close"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/no_red"
+                app:tint="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextAppearance.Omang.TitleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:text="@{notification.title}"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            tools:text="Survey Added" />
+
+        <TextView
+            android:id="@+id/tv_body"
+            style="@style/TextAppearance.Omang.TitleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@{notification.description}"
+            android:textColor="@color/grey_tech_support_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_post"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/place_holder"
+            android:hardwareAccelerated="false"
+            android:visibility="gone"
+            app:shapeAppearanceOverlay="@style/circleImageViewBorder5" />
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_3sdp"
+        android:elevation="@dimen/_4sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_2sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_8sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/user_place_holder"
+                android:padding="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                app:strokeColor="@color/text_grey_bg"
+                android:hardwareAccelerated="false"
+                app:strokeWidth=".5dp" />
+
+            <TextView
+                android:id="@+id/tv_update"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:includeFontPadding="false"
+                android:text="Content creator name"
+                android:textColor="#525252"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
+                app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+                app:layout_constraintTop_toTopOf="@+id/iv_avatar" />
+            <!--            <TextView-->
+
+            <com.omang.app.utils.ExpandableTextView2
+                android:id="@+id/tv_description"
+                style="@style/TextAppearance.Omang.TitleSmallSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/lorem_ipsum"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:collapseActionColor="@color/deep_blue"
+                app:expandActionColor="@color/deep_blue"
+                app:collapseActionText="show less"
+                app:expandActionText="show more"
+                app:limitedMaxLines="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_update"
+               />
+
+         <!--   -->
+            <RelativeLayout
+                android:id="@+id/llRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/iv_star"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:src="@drawable/ic_star"
+
+                 />
+                <!--app:layout_constraintBottom_toBottomOf="@+id/tv_rate"
+                app:layout_constraintEnd_toStartOf="@+id/tv_rate"
+                app:layout_constraintTop_toTopOf="@+id/tv_rate"-->
+
+            <TextView
+                android:id="@+id/tv_rate"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/rate"
+                android:layout_toEndOf="@+id/iv_star"
+                android:textColor="@color/text_content_color"
+               />
+            </RelativeLayout>
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_place_holder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/place_holder"
+                android:hardwareAccelerated="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                app:shapeAppearanceOverlay="@style/circleImageViewBorder5" />
+
+            <ImageView
+                android:id="@+id/iv_pdf_viewholder"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pdf_placeholder"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_place_holder"
+                app:layout_constraintEnd_toEndOf="@+id/iv_place_holder"
+                app:layout_constraintStart_toStartOf="@+id/iv_place_holder"
+                app:layout_constraintTop_toTopOf="@+id/iv_place_holder" />
+
+            <ImageView
+                android:id="@+id/iv_video_viewholder"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/video_viewholder"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_place_holder"
+                app:layout_constraintEnd_toEndOf="@+id/iv_place_holder"
+                app:layout_constraintStart_toStartOf="@+id/iv_place_holder"
+                app:layout_constraintTop_toTopOf="@+id/iv_place_holder" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/pb_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:indicatorColor="@color/deep_blue"
+                app:indicatorSize="@dimen/_30sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_place_holder"
+                app:layout_constraintEnd_toEndOf="@+id/iv_place_holder"
+                app:layout_constraintStart_toStartOf="@+id/iv_place_holder"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                app:trackColor="@color/color_silver"
+                app:trackThickness="@dimen/_3sdp" />
+
+            <TextView
+                android:id="@+id/tv_progress"
+                style="@style/TextAppearance.Omang.textNewUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/pb_progress"
+                app:layout_constraintEnd_toEndOf="@id/pb_progress"
+                app:layout_constraintStart_toStartOf="@id/pb_progress"
+                app:layout_constraintTop_toTopOf="@id/pb_progress"
+                tools:text="10%" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/iv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:backgroundTint="@color/progress_seventy"
+                android:padding="@dimen/_11sdp"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/_50sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_place_holder"
+                app:layout_constraintStart_toStartOf="@+id/iv_place_holder">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:hardwareAccelerated="false"
+                    android:src="@drawable/download_white" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/iv_weblink"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/ic_weblink"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_place_holder"
+                app:tint="@color/deep_blue" />
+
+            <TextView
+                android:id="@+id/tv_weblink"
+                style="@style/TextAppearance.Omang.BodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:includeFontPadding="false"
+                android:text="@string/web_links"
+                android:textColor="@color/deep_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_weblink"
+                app:layout_constraintStart_toEndOf="@+id/iv_weblink"
+                app:layout_constraintTop_toTopOf="@+id/iv_weblink" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

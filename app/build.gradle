@@ -1,0 +1,372 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
+}
+
+android {
+    namespace core.namespace
+    compileSdk core.compileSDK
+
+    defaultConfig {
+        applicationId core.appId
+        minSdk core.minSDK
+        //noinspection OldTargetApi
+        targetSdk core.targetSDK
+        versionCode core.versionCode
+        versionName core.versionName
+
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+//            noinspection ChromeOsAbiSupport
+            abiFilters "armeabi-v7a"
+
+        }
+
+        configurations.configureEach {
+            resolutionStrategy {
+                force("androidx.emoji2:emoji2-views-helper:1.3.0")
+                force("androidx.emoji2:emoji2:1.3.0")
+            }
+        }
+    }
+
+    signingConfigs {
+        /*    debug {
+                storeFile file(signings.filePath)
+                keyAlias signings.alias
+                storePassword signings.storePassword
+                keyPassword signings.keyPassword
+            }
+            */
+        release {
+        // storeFile file(/*'D:\\Keystore\\One-Omang\\one-omang.jks'*/'/home/cubet/Work/Keystore/One-Omang/one-omang.jks'/*signings.filePath*/)
+          //  storeFile file('/home/c850/Documents/JKS/One-Omang/one-omang.jks')
+            storeFile file('/home/c772/bit-of-a-pickle/preference/Keystore/One-Omang/one-omang.jks')
+            keyAlias 'one-omang'/*signings.alias*/
+            storePassword 'one-omang'/*signings.storePassword*/
+            keyPassword 'one-omang'/*signings.keyPassword*/
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        android10 {
+            dimension "default"
+            applicationIdSuffix ".android10"
+
+        }
+        android13 {
+            dimension "default"
+            applicationIdSuffix ".android13"
+
+        }
+    }
+
+    buildTypes {
+
+        debugStaging {
+            debuggable true
+
+            applicationIdSuffix '.debug'
+            versionNameSuffix "-debug-staging"
+
+            buildConfigField "String", "BASE_URL", BASE_URLS.STAGING
+
+            buildConfigField "String", "TB8505X", CSDK_DEV.TB8505X
+            buildConfigField "String", "TB310XU", CSDK_DEV.TB310XU
+            buildConfigField "String", "TB300XU", CSDK_DEV.TB300XU
+
+            buildConfigField "String", "DECYPHER_KEY", DECYPHER_KEY.DUMMY
+
+            signingConfig signingConfigs.debug
+
+        }
+
+        debugUAT {
+            debuggable true
+
+            applicationIdSuffix '.debug'
+            versionNameSuffix "-debug-staging"
+
+            buildConfigField "String", "BASE_URL", BASE_URLS.UAT
+
+            buildConfigField "String", "TB8505X", CSDK_DEV.TB8505X
+            buildConfigField "String", "TB310XU", CSDK_DEV.TB310XU
+            buildConfigField "String", "TB300XU", CSDK_DEV.TB300XU
+
+            buildConfigField "String", "DECYPHER_KEY", DECYPHER_KEY.DUMMY
+
+            signingConfig signingConfigs.debug
+
+        }
+
+        debugProd {
+            initWith debug
+
+            applicationIdSuffix '.debug'
+            versionNameSuffix "-debug-prod"
+
+            buildConfigField "String", "BASE_URL", BASE_URLS.PROD
+
+            buildConfigField "String", "TB8505X", CSDK_DEV.TB8505X
+            buildConfigField "String", "TB310XU", CSDK_DEV.TB310XU
+            buildConfigField "String", "TB300XU", CSDK_DEV.TB300XU
+
+            buildConfigField "String", "DECYPHER_KEY", DECYPHER_KEY.PROD
+
+        }
+
+        releaseProd {
+            debuggable false
+
+            jniDebuggable true
+            minifyEnabled false
+            shrinkResources false
+            multiDexEnabled true
+
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "BASE_URL", BASE_URLS.PROD
+
+            buildConfigField "String", "TB8505X", CSDK_PROD.TB8505X
+            buildConfigField "String", "TB300XU", CSDK_PROD.TB300XU
+            buildConfigField "String", "TB310XU", CSDK_PROD.TB310XU
+
+            buildConfigField "String", "DECYPHER_KEY", DECYPHER_KEY.PROD
+
+            signingConfig signingConfigs.release
+
+        }
+
+        releaseUAT {
+            debuggable false
+            jniDebuggable true
+            minifyEnabled false
+            shrinkResources false
+            multiDexEnabled true
+
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "BASE_URL", BASE_URLS.UAT
+
+            buildConfigField "String", "TB8505X", CSDK_PROD.TB8505X
+            buildConfigField "String", "TB300XU", CSDK_PROD.TB300XU
+            buildConfigField "String", "TB310XU", CSDK_PROD.TB310XU
+
+            buildConfigField "String", "DECYPHER_KEY", DECYPHER_KEY.DUMMY
+
+            signingConfig signingConfigs.release
+
+        }
+
+        releaseStaging {
+            debuggable false
+            jniDebuggable true
+            minifyEnabled false
+            shrinkResources false
+            multiDexEnabled true
+
+            versionNameSuffix "-release-staging"
+
+            buildConfigField "String", "BASE_URL", BASE_URLS.STAGING
+
+            buildConfigField "String", "TB8505X", CSDK_PROD.TB8505X
+            buildConfigField "String", "TB300XU", CSDK_PROD.TB300XU
+            buildConfigField "String", "TB310XU", CSDK_PROD.TB310XU
+
+            buildConfigField "String", "DECYPHER_KEY", DECYPHER_KEY.DUMMY
+
+            signingConfig signingConfigs.release
+
+        }
+    }
+
+    sourceSets {
+        android10 {
+            java {
+                srcDirs = ['src/android10/java' + core.namespace]
+            }
+        }
+
+        android13 {
+            java {
+                srcDirs = ['src/android13/java' + core.namespace]
+            }
+        }
+
+        main {
+            java {
+//                exclude('') if needed
+            }
+        }
+    }
+
+    configurations {
+        android10Implementation
+        android13Implementation
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = sourceCompatibility JavaVersion.VERSION_17.toString()
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildFeatures {
+        buildConfig = true
+        viewBinding true
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.1"
+    }
+
+    kapt {
+        arguments {
+            arg("room.schemaLocation", "$projectDir/schemas".toString())
+        }
+    }
+
+}
+
+dependencies {
+    android10Implementation files('src/android10/libs/LenovoCSDK3.jar')
+    android13Implementation files('src/android13/libs/LenovoCSDK6.jar')
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.hilt:hilt-common:1.0.0'
+    implementation 'androidx.hilt:hilt-work:1.0.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+    implementation platform("com.google.firebase:firebase-bom:$versions.FIREBASE_BOM")
+    implementation "com.google.firebase:firebase-messaging-ktx"
+    implementation "com.google.firebase:firebase-crashlytics-ktx"
+    implementation "com.google.firebase:firebase-analytics-ktx"
+
+    implementation "androidx.work:work-runtime-ktx:$versions.work_runtime_ktx"
+    implementation "androidx.core:core-ktx:$versions.core_ktx"
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+
+    implementation(platform('androidx.compose:compose-bom:2023.10.00'))
+    implementation("androidx.compose.ui:ui-tooling")
+    implementation("androidx.compose.material3:material3")
+
+    implementation("io.coil-kt:coil-compose:$versions.COIL")
+    implementation("io.coil-kt:coil-gif:$versions.COIL")
+    implementation "io.coil-kt:coil:$versions.COIL"
+
+    //hilt
+    implementation 'com.google.dagger:hilt-android:2.46.1'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.hilt:hilt-navigation-fragment:1.0.0'
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$versions.RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:converter-gson:$versions.RETROFIT_VERSION"
+
+    implementation('io.socket:socket.io-client:2.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.8'
+    // material design
+    implementation 'com.google.android.material:material:1.9.0'
+
+    //barcode scanner
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+
+//    room
+    implementation "androidx.room:room-ktx:$versions.roomVersion"
+    implementation "androidx.room:room-runtime:$versions.roomVersion"
+    kapt("androidx.room:room-compiler:$versions.roomVersion")
+
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    kapt 'com.google.dagger:hilt-compiler:2.46.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+    implementation 'androidx.fragment:fragment-ktx:1.6.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //PR downloader
+    implementation "com.mindorks.android:prdownloader:$versions.PR_DOWNLODER_VERSION"
+
+    //Google Code Scanner
+    // implementation "com.google.android.gms:play-services-code-scanner:$versions.GOOGLE_SCANNER_VERSION"
+    //implementation "com.google.android.gms:play-services-base:$versions.PLAYSTORE_BASE_VERSION"
+
+    //Camera X
+    implementation "androidx.camera:camera-core:${versions.CAMERAX_VERSION}"
+    implementation "androidx.camera:camera-camera2:${versions.CAMERAX_VERSION}"
+    implementation "androidx.camera:camera-lifecycle:${versions.CAMERAX_VERSION}"
+    implementation "androidx.camera:camera-video:${versions.CAMERAX_VERSION}"
+
+    implementation "androidx.camera:camera-view:${versions.CAMERAX_VERSION}"
+    implementation "androidx.camera:camera-extensions:${versions.CAMERAX_VERSION}"
+    //Image Cropper
+    implementation "com.theartofdev.edmodo:android-image-cropper:${versions.IMAGE_CROPPER_VERSION}"
+    //Intuit for dimensions
+    implementation "com.intuit.sdp:sdp-android:$versions.SDP_SSP"
+    implementation "com.intuit.ssp:ssp-android:$versions.SDP_SSP"
+    //Shimmer layout
+    implementation "com.facebook.shimmer:shimmer:$versions.SHIMMER"
+    //zoomable imageview
+//    implementation "com.github.chrisbanes:PhotoView:$versions.ZOOMABLE_IMAGEVIEW"
+    //Glide for image loading
+    implementation "com.github.bumptech.glide:glide:$versions.GLIDE"
+
+    implementation "com.airbnb.android:lottie:$versions.LOTTIE"
+
+
+    //  implementation 'io.reactivex.rxjava3:rxjava:3.x.x'
+    //  implementation 'io.reactivex.rxjava3:rxandroid:3.x.x'
+
+    implementation 'org.greenrobot:eventbus:3.3.1'
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.7'
+
+    //PDF viewer
+    implementation "com.github.barteksc:android-pdf-viewer:$versions.PDF_VIEWER"
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
+
+    implementation "com.github.PhilJay:MPAndroidChart:v$versions.MP_CHART"
+
+//    implementation "com.github.giangpham96.expandable-text:expandable_textview:$versions.EXPANDABLE_TEXTVIEW"
+
+    // For blur image
+    implementation 'com.github.wasabeef:blurry:3.0.0'
+    annotationProcessor "com.github.bumptech.glide:compiler:$versions.GLIDE"
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+
+}
+

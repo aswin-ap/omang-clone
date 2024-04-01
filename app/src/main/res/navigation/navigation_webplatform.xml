@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_web_platform"
+    app:startDestination="@id/webPlatformsFragment">
+
+    <fragment
+        android:id="@+id/webPlatformsFragment"
+        android:name="com.omang.app.ui.explore.fragment.WebPlatformsFragment"
+        android:label="fragment_main_webplatforms"
+        tools:layout="@layout/fragment_main_webplatforms">
+        <action
+            android:id="@+id/action_mainWebPlatformsFragment_to_webPlatformsFragment"
+            app:destination="@id/allWebPlatformsFragment" />
+        <action
+            android:id="@+id/action_mainWebPlatformsFragment_to_favouritesWebPlatformsFragment"
+            app:destination="@id/favouritesWebPlatformsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_webPlatformFragment_to_webViewerFragment"
+            app:destination="@id/webViewerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/allWebPlatformsFragment"
+        android:name="com.omang.app.ui.explore.fragment.AllWebPlatformsFragment"
+        android:label="fragment_web_platforms"
+        tools:layout="@layout/fragment_web_platforms">
+        <action
+            android:id="@+id/action_allWebPlatformsFragment_to_webViewerFragment"
+            app:destination="@id/webViewerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesWebPlatformsFragment"
+        android:name="com.omang.app.ui.explore.fragment.FavouritesWebPlatformsFragment"
+        android:label="fragment_favourites_web_platforms"
+        tools:layout="@layout/fragment_favourites_web_platforms" />
+
+    <fragment
+        android:id="@+id/webViewerFragment"
+        android:name="com.omang.app.ui.webViewer.fragment.WebViewerFragment"
+        android:label="fragment_web_viewer"
+        tools:layout="@layout/fragment_web_viewer">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_webViewerFragment_to_documentViewerFragment4"
+            app:destination="@id/pdfViewerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="weblinkData"
+            app:argType="com.omang.app.data.model.explore.WebItem" />
+
+        <argument
+            android:name="lessonId"
+            app:argType="integer" />
+
+        <argument
+            android:name="classroomId"
+            app:argType="integer" />
+
+        <argument
+            android:name="menu"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pdfViewerFragment"
+        android:name="com.omang.app.ui.pdfViewer.fragment.DocumentViewerFragment"
+        android:label="fragment_pdf_viewer"
+        tools:layout="@layout/fragment_pdf_viewer">
+        <action
+            android:id="@+id/action_documentViewerFragment4_to_navigation_tech_support"
+            app:destination="@id/navigation_tech_support"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="resourceId"
+            app:argType="integer" />
+        <argument
+            android:name="file"
+            app:argType="string" />
+        <argument
+            android:name="classroomId"
+            app:argType="integer" />
+        <argument
+            android:name="lessonId"
+            app:argType="integer" />
+        <argument
+            android:name="unitId"
+            app:argType="integer" />
+        <argument
+            android:name="menu"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

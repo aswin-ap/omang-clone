@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white2"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        android:hardwareAccelerated="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Omang.View.Rounded" />
+
+    <TextView
+        android:id="@+id/txt_test_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:textColor="@color/text_heading_color"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
+        app:layout_constraintTop_toTopOf="@+id/shapeableImageView"
+        tools:text="DOS Final Test" />
+
+
+    <TextView
+        android:id="@+id/txt_test_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_test_name"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:text="10 Questions   |   30 Mins"
+        android:textColor="@color/text_content_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/shapeableImageView"
+        app:layout_constraintStart_toStartOf="@+id/txt_test_name"
+        app:layout_constraintTop_toBottomOf="@+id/txt_test_name" />
+
+
+    <ImageView
+        android:id="@+id/iv_timer"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/timer_clock"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_timer"
+        app:layout_constraintEnd_toStartOf="@+id/txt_timer"
+        app:layout_constraintTop_toTopOf="@+id/txt_timer"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <TextView
+        android:id="@+id/txt_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_timer"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:textColor="@color/color_greyish_brown"
+        app:layout_constraintBottom_toBottomOf="@+id/shapeableImageView"
+        app:layout_constraintEnd_toEndOf="@+id/shapeableImageView"
+        app:layout_constraintTop_toTopOf="@+id/shapeableImageView"
+        tools:text="9:10" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progress="10"
+        android:progressTint="@color/color_shamrock_green"
+        app:layout_constraintEnd_toEndOf="@+id/shapeableImageView"
+        app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
+
+        app:layout_constraintTop_toBottomOf="@+id/shapeableImageView"
+        app:trackColor="@color/light_blue"
+        app:trackCornerRadius="3dp" />
+
+
+    <TextView
+        android:id="@+id/txt_current_question_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="2"
+        android:textColor="@color/text_content_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView18"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" / "
+        android:textColor="@color/text_content_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_current_question_number"
+        app:layout_constraintEnd_toStartOf="@+id/txt_total_questions"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_current_question_number"
+        app:layout_constraintTop_toTopOf="@+id/txt_current_question_number" />
+
+    <TextView
+        android:id="@+id/txt_total_questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textColor="@color/text_content_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_prev"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_current_question_number" />
+
+
+    <Button
+        android:id="@+id/button_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:drawableLeft="@drawable/ic_previous"
+        android:drawableTint="@color/white"
+        android:paddingStart="4dp"
+        android:text="@string/prev"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_next"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:drawableEnd="@drawable/ic_next"
+        android:drawableTint="@color/white"
+        android:paddingEnd="4dp"
+        android:text="@string/next"
+        android:textColor="@color/color_white"
+        app:layout_constraintBottom_toBottomOf="@+id/button_prev"
+        app:layout_constraintEnd_toStartOf="@+id/button_submit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_prev"
+        app:layout_constraintTop_toTopOf="@+id/button_prev"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textColor="@color/color_white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/button_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_next"
+        app:layout_constraintTop_toTopOf="@+id/button_next"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

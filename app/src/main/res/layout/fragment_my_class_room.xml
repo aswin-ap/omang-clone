@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ui.myClassroom.fragments.MyClassRoomFragment">
+    <Button
+        android:id="@+id/btn_send_test"
+        style="@style/Omang.Button.Rounded"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/deep_blue"
+        android:text="@string/send_your_test_results"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/_6ssp"
+        app:layout_constraintBottom_toTopOf="@+id/flTab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <FrameLayout
+        android:id="@+id/flTab"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_my_class_room"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginEnd="@dimen/_100sdp"
+            android:backgroundTint="@color/bt_selector_false"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/my_classroom"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_7sdp" />
+
+        <Button
+            android:id="@+id/btn_my_clubs"
+            style="@style/Omang.View.Rounded"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:backgroundTint="@color/bt_selector_false"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/my_club"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_7sdp" />
+
+    </FrameLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flTab" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/lyt_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:trackColor="@color/deep_blue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

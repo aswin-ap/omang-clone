@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:paddingTop="?attr/actionBarSize">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:hardwareAccelerated="false"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
+        app:shapeAppearanceOverlay="@style/Omang.Card.Rounded">
+
+    </com.google.android.material.imageview.ShapeableImageView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_greetings"
+            style="@style/TextAppearance.Omang.TitleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/congratulation"
+            android:textColor="@color/text_success_color"
+            android:textFontWeight="600"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txt_completed_description"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/you_have_successfully_completed_your_test"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintEnd_toEndOf="@+id/txt_greetings"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_greetings"
+            app:layout_constraintTop_toBottomOf="@+id/txt_greetings" />
+
+        <TextView
+            android:id="@+id/txt_test_summary_label"
+            style="@style/TextAppearance.Omang.BodyMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/test_summary"
+            android:textColor="@color/text_content_color"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txt_greetings"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_greetings"
+            app:layout_constraintTop_toBottomOf="@+id/txt_completed_description" />
+
+        <TextView
+            android:id="@+id/txt_obtained_label"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:text="@string/obtained_percent"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintEnd_toStartOf="@+id/textView24"
+            app:layout_constraintStart_toStartOf="@+id/txt_test_summary_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_test_summary_label" />
+
+
+        <TextView
+            android:id="@+id/textView24"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_colon"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_obtained_label"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline8" />
+
+        <TextView
+            android:id="@+id/txt_obtained"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_obtained_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            tools:text=" 78" />
+
+        <TextView
+            android:id="@+id/txt_total_time_label"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/test_time"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_obtained_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_obtained" />
+
+
+        <TextView
+            android:id="@+id/textView25"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_colon"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_total_time_label"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline8" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_total_time_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            tools:text="125" />
+
+        <TextView
+            android:id="@+id/txt_total_time_taken_label"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/total_time_taken"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_obtained_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_time" />
+
+        <TextView
+            android:id="@+id/textView26"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_colon"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_total_question_label"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline8" />
+
+
+        <TextView
+            android:id="@+id/txt_time_taken"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_total_time_taken_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            tools:text="20" />
+
+        <TextView
+            android:id="@+id/txt_total_question_label"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="Total Q."
+            android:textColor="@color/text_content_color"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_total_time_taken_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_time_taken" />
+
+        <TextView
+            android:id="@+id/textView27"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_colon"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_total_time_taken_label"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline8" />
+
+
+        <TextView
+            android:id="@+id/txt_total_question"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_total_question_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            tools:text="20" />
+
+        <TextView
+            android:id="@+id/txt_attempted_label"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/attempted_q"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_total_question_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_total_question" />
+
+        <TextView
+            android:id="@+id/textView28"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_colon"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_wrong_label"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline8" />
+
+        <TextView
+            android:id="@+id/txt_attempted"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_attempted_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/txt_correct_label"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="Correct"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_attempted_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_attempted" />
+
+        <TextView
+            android:id="@+id/textView29"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_colon"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_attempted_label"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline8" />
+
+
+        <TextView
+            android:id="@+id/txt_correct"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+
+            android:textColor="@color/text_success_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_correct_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            tools:text="78" />
+
+        <TextView
+            android:id="@+id/txt_wrong_label"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:text="@string/wrong"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txt_obtained_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_correct"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView30"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_colon"
+            android:textColor="@color/text_content_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_correct_label"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline8" />
+
+        <TextView
+            android:id="@+id/txt_wrong"
+            style="@style/TextAppearance.Omang.BodySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:textColor="@color/text_error_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_wrong_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            tools:text="3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.42" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="txt_time,textView25,txt_total_time_label, txt_total_time_taken_label,textView27, txt_time_taken" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_exit"
+        style="@style/Omang.Button.Rounded"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:backgroundTint="@color/dialog_grey_bg"
+        android:text="@string/exit"
+        android:textColor="@color/color_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapeableImageView3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

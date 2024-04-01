@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.omang.app.one.android10",
+  "variantName": "android10ReleaseProd",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1107,
+      "versionName": "1.0.107",
+      "outputFile": "app-android10-releaseProd.apk"
+    }
+  ],
+  "elementType": "File"
+}

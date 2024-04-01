@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.omang.app.one.android10",
+  "variantName": "android10ReleaseStaging",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1160,
+      "versionName": "1.0.160-release-staging",
+      "outputFile": "app-android10-releaseStaging.apk"
+    }
+  ],
+  "elementType": "File"
+}

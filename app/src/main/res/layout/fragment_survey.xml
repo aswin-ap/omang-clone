@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/txt_no_contents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_pager_survey"
+        tools:visibility="visible" />
+
+
+    <Button
+        android:id="@+id/btn_attempted"
+        style="@style/Omang.Tab.RoundedEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/attempted"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_new"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_new"
+        app:layout_constraintTop_toTopOf="@+id/btn_new" />
+
+    <Button
+        android:id="@+id/btn_new"
+        style="@style/Omang.Tab.RoundedStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_test"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toStartOf="@+id/btn_attempted"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_survey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_new"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

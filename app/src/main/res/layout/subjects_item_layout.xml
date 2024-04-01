@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="subject"
+            type="com.omang.app.data.database.myClassroom.MyClassroomEntity" />
+
+        <variable
+            name="click"
+            type="com.omang.app.ui.myClassroom.adapter.SubjectClickListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:onClick="@{() ->  click.itemCardClicked(subject)}"
+        android:clickable="true"
+        app:cardPreventCornerOverlap="false"
+        app:strokeWidth="0dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/iv_bubble"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/ic_bell_update"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/pb_outer"
+                track_progress="@{subject.progress}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:indicatorSize="@dimen/_45sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_bubble"
+                app:trackThickness="4dp" />
+
+            <!--            <com.google.android.material.progressindicator.CircularProgressIndicator
+                            android:id="@+id/pb_outer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            app:indicatorSize="@dimen/_45sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/lt_alert"
+                            app:trackThickness="4dp" />-->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/progressCard"
+                card_background="@{subject.progress}"
+                android:layout_width="@dimen/_31sdp"
+                android:layout_height="@dimen/_31sdp"
+                app:cardBackgroundColor="#FF0000"
+                app:cardCornerRadius="75dp"
+                app:layout_constraintBottom_toBottomOf="@+id/pb_outer"
+                app:layout_constraintEnd_toEndOf="@+id/pb_outer"
+                app:layout_constraintStart_toStartOf="@+id/pb_outer"
+                app:layout_constraintTop_toTopOf="@+id/pb_outer">
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    style="@style/TextAppearance.Omang.BodySmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@{@string/percentage(subject.progress)}"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    tools:text="60%" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!--           <androidx.cardview.widget.CardView
+                           android:id="@+id/progressCard"
+                           android:layout_width="@dimen/_31sdp"
+                           android:layout_height="@dimen/_31sdp"
+                           app:cardBackgroundColor="#FF0000"
+                           app:cardCornerRadius="75dp"
+                           app:layout_constraintBottom_toBottomOf="@+id/pb_outer"
+                           app:layout_constraintEnd_toEndOf="@+id/pb_outer"
+                           app:layout_constraintStart_toStartOf="@+id/pb_outer"
+                           app:layout_constraintTop_toTopOf="@+id/pb_outer">
+
+                           <TextView
+                               android:id="@+id/tv_progress"
+                               style="@style/TextAppearance.Omang.BodySmall"
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               android:gravity="center"
+                               android:textColor="@color/white"
+                               android:textStyle="bold"
+                               tools:text="60%" />
+
+                       </androidx.cardview.widget.CardView>-->
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/pb_main"
+                indicator_progress="@{subject.progress}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indicatorSize="@dimen/_47sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/progressCard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/progressCard"
+                app:trackCornerRadius="@dimen/_5sdp"
+                app:trackThickness="8dp" />
+
+
+            <TextView
+                android:id="@+id/tv_books"
+                style="@style/TextAppearance.Omang.TitleSmallSecondaryInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="center"
+                android:text="@{@string/no_books(subject.contents.books)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pb_outer"
+                tools:text="11 books" />
+
+            <TextView
+                android:id="@+id/tv_videos"
+                style="@style/TextAppearance.Omang.TitleSmallSecondaryInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{@string/no_videos(subject.contents.videos)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_books"
+                tools:text="62 videos" />
+
+            <TextView
+                android:id="@+id/tv_lessons"
+                style="@style/TextAppearance.Omang.TitleSmallSecondaryInter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{@string/no_lessons(subject.contents.lessons)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_videos"
+                tools:text="105 lessons" />
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/TextAppearance.Omang.BodyOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@{subject.name}"
+                android:textAllCaps="true"
+                android:textColor="@color/card_txt_primary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lessons"
+                tools:text="English" />
+
+            <TextView
+                android:id="@+id/tv_last_updated"
+                style="@style/TextAppearance.Omang.textNewUpdateInter"
+                last_updated_text="@{subject.updatedAt}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/card_txt_primary"
+                android:textSize="@dimen/_5ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/last_updated" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_tech_support"
+    app:startDestination="@id/techSupportFragment">
+
+    <fragment
+        android:id="@+id/techSupportFragment"
+        android:name="com.omang.app.ui.techSupport.ticketList.fragment.TicketListFragment"
+        android:label="fragment_main_tech_support"
+        tools:layout="@layout/fragment_ticket_list">
+
+        <action
+            android:id="@+id/action_ticket_listing_to_report_issue"
+            app:destination="@+id/reportIssueFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_techSupportFragment_to_ticketDetailsFragment"
+            app:destination="@id/ticketDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_techSupportFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/ticketDetailsFragment"
+        android:name="com.omang.app.ui.techSupport.ticketList.fragment.TicketDetailsFragment"
+        android:label="fragment_ticket_details"
+        tools:layout="@layout/fragment_ticket_details" />
+
+    <fragment
+        android:id="@+id/reportIssueFragment"
+        android:name="com.omang.app.ui.techSupport.reportIssue.ReportIssue"
+        android:label="fragment_report_issue"
+        tools:layout="@layout/fragment_report_issue">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/uploadImageFragment"
+        android:name="com.omang.app.ui.techSupport.uploadImage.fragment.UploadImageFragment"
+        android:label="fragment_upload_image"
+        tools:layout="@layout/fragment_upload_image">
+        <action
+            android:id="@+id/action_uploadImageFragment_to_reportIssueFragment"
+            app:destination="@id/reportIssueFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.omang.app.ui.chat.fragment.ChatFragment"
+        android:label="Chat Fragment"
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="roomId"
+            app:argType="integer" />
+
+    </fragment>
+
+</navigation>

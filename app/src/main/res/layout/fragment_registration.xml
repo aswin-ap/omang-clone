@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context=".ui.registration.activity.RegistrationActivity">
+
+    <Button
+        android:id="@+id/BtDeviceM9"
+        style="@style/TextAppearance.Omang.TitleSmallSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/deep_blue"
+        android:text="Allwin's M9 Reg"
+        android:visibility="gone"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtAssign"
+        style="@style/TextAppearance.Omang.TitleSmallSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:backgroundTint="@color/deep_blue"
+        android:visibility="gone"
+        android:text="Allwin's M9 Assign"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/BtDeviceM9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginBottom="26dp"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:src="@drawable/ic_omang_logo"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvRegistration"
+            style="@style/Omang.Card.Rounded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cvUserAssign"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/TextAppearance.Omang.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_this_device"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_grey_bg"
+                    android:textFontWeight="600"
+                    app:layout_constraintEnd_toStartOf="@+id/im_device_register_status"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/im_device_register_status"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/tick_registration"
+                    android:backgroundTint="@color/color_disabled"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/TextAppearance.Omang.BodySmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/scan_barcode_error_message"
+                        android:textColor="@color/card_txt_primary"
+                        android:textFontWeight="500"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_register_imei_scan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_extra_small"
+                        android:background="@drawable/bg_round_corner"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_extra_small"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                        <TextView
+                            android:id="@+id/tvIMEI"
+                            style="@style/TextAppearance.Omang.TitleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/imei"
+                            android:textColor="@color/deep_blue"
+                            android:textFontWeight="500" />
+
+                        <TextView
+                            android:id="@+id/tv_register_imei_no"
+                            style="@style/TextAppearance.Omang.TitleSmallInter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="500"
+                            android:maxLines="1"
+                            android:paddingBottom="@dimen/_3sdp"
+                            android:text="@string/click_here_to_scan" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_register_sim_scan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_extra_small"
+                        android:background="@drawable/bg_round_corner"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_extra_small"
+                        app:layout_constraintBottom_toBottomOf="@+id/ll_register_imei_scan"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toTopOf="@+id/ll_register_imei_scan">
+
+                        <TextView
+                            style="@style/TextAppearance.Omang.TitleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sim"
+                            android:textColor="@color/deep_blue" />
+
+                        <TextView
+                            android:id="@+id/tv_register_sim_no"
+                            style="@style/TextAppearance.Omang.TitleSmallInter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:maxLines="1"
+                            android:paddingBottom="@dimen/_3sdp"
+                            android:text="@string/click_here_to_scan" />
+
+                    </LinearLayout>
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editText"
+                        style="@style/Omang.Editext.Rounded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="@string/enter_password"
+                        app:hintAnimationEnabled="false"
+                        app:hintEnabled="true"
+                        app:hintTextAppearance="@style/Omang.Editext.Rounded"
+                        app:layout_constraintEnd_toEndOf="@+id/ll_register_sim_scan"
+                        app:layout_constraintStart_toStartOf="@+id/ll_register_imei_scan"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_register_imei_scan"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/register_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textSize="@dimen/_11ssp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tvError"
+                        style="@style/TextAppearance.Omang.TitleSmallInter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="500"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:textColor="@color/delete_red"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/bt_register"
+                        app:layout_constraintEnd_toEndOf="@+id/bt_register"
+                        app:layout_constraintStart_toStartOf="@+id/bt_register" />
+
+                    <Button
+                        android:id="@+id/bt_register"
+                        style="@style/TextAppearance.Omang.TitleSmallSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:backgroundTint="@color/deep_blue"
+                        android:text="@string/register"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/editText"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvUserAssign"
+            style="@style/Omang.Card.Rounded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvRegistration">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_small">
+
+                <ImageView
+                    android:id="@+id/im_user_assign_status"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:background="@drawable/tick_registration"
+                    android:backgroundTint="@color/color_disabled"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView31"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView31"
+                    app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    style="@style/TextAppearance.Omang.TitleMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_registration"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_grey_bg"
+                    android:textFontWeight="600"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_user_assign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView31">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_user_scan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_round_corner"
+                        android:gravity="center"
+                        android:minWidth="@dimen/_70sdp"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_extra_small"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_user_id"
+                            style="@style/TextAppearance.Omang.TitleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Student"
+                            android:textColor="@color/deep_blue"
+                            android:textFontWeight="500" />
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            style="@style/TextAppearance.Omang.TitleSmallInter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:maxLines="1"
+                            android:paddingBottom="@dimen/_3sdp"
+                            android:text="@string/click_here_to_scan" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edit_pass"
+                        style="@style/Omang.Editext.Rounded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_user_scan"
+                        app:passwordToggleEnabled="true"
+                        app:placeholderText="@string/enter_secret">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/user_assign_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_user_sim_scan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_round_corner"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_extra_small"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/ll_user_scan"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline2"
+                        app:layout_constraintTop_toTopOf="@+id/ll_user_scan">
+
+                        <TextView
+                            android:id="@+id/tv_user_sim_no"
+                            style="@style/TextAppearance.Omang.TitleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sim"
+                            android:textColor="@color/deep_blue" />
+
+                        <TextView
+                            android:id="@+id/tv_userSIMNo"
+                            style="@style/TextAppearance.Omang.TitleSmallInter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/inter_semibold"
+                            android:maxLines="1"
+                            android:paddingBottom="@dimen/_3sdp"
+                            android:text="@string/click_here_to_scan" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/bt_assign"
+                        style="@style/TextAppearance.Omang.TitleSmallSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="@color/deep_blue"
+                        android:text="@string/assign"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                        app:layout_constraintStart_toStartOf="@+id/guideline2"
+                        app:layout_constraintTop_toBottomOf="@+id/edit_pass" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_circular"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminate="true"
+        app:indicatorColor="@color/deep_blue"
+        app:indicatorSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
